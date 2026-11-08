@@ -50,3 +50,11 @@ The hosted atlas loads the latest **published Repo_Dex GitHub Actions feed**, bu
 - The public scanner source-inspected 36 of 202 public repositories in its first published snapshot; the rest have public metadata coverage only. Recommendations are proposed experiments, not verified integrations.
 
 The repair's Chromium behavior checks and precise limits are in [ATLAS_LIVE_QA.md](ATLAS_LIVE_QA.md).
+
+## Living Atlas phase 2 — COOL Five (2026-11-08)
+
+The atlas now uses **stable GitHub repository IDs** while retaining legacy node identifiers and curated source relationships through verified repository renames. [Repo_Dex](https://github.com/westkitty/Repo_Dex) supplies a progressively inspected public evidence feed and a separate `feed/status.json` scan receipt, distinguishing the last *successful scan* from the last *evidence change*. If status is unavailable or mismatched, the atlas does not invent freshness and retains the last valid graph.
+
+The **Opportunity Laboratory** is available at [Repo_Dex / laboratory](https://westkitty.github.io/Repo_Dex/laboratory.html). Atlas Pulse can review, shelve and reject source-grounded hypotheses with the same local-only decision format. These decisions are browser-private, not included in public GitHub Pages feeds. They can be exported and imported by the user, but they do **not** automatically synchronize between devices or different web origins; avoid claiming shared cloud accounts or private server storage.
+
+All hypotheses remain explicitly unverified. The 201-repository embedded source snapshot continues to work offline, and current public metadata does not retroactively verify the original curated prose. For implementation scope, constraints and tests, see [LIVING_ATLAS_PHASE2.md](LIVING_ATLAS_PHASE2.md) and the project [operational state](OPERATIONAL_STATE.md).
