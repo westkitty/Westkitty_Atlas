@@ -11,3 +11,9 @@ Verified locally: 202 live public records incorporated with prior evidence, 37 c
 Protected: offline standalone operation, 30% permanent chrome budget, mobile controls, search/filter/orbit/zoom, original source links and read-only external project boundaries.
 
 Delivery status: local candidate created. Hosted deployment and live-site acceptance remain separate proof gates if/when authorized.
+
+## 2026-11-08 -- OMNI UX v3: task-first Atlas without sacrificing the map
+
+Approved operating model: Explore -> Discover -> Review. Keep the starfield primary, with task navigation in the existing inspector. Add keyboard-accessible text index, direct current-discovery and experiment-review paths, clearer provenance, phone Return to Map and preserved/expanded accessible hit areas. Original map controls and source-cited evidence remain in place. No external scripts; same browser-local decision runtime is embedded to keep standalone offline functionality.
+
+Validation (candidate, before publishing): static 33/33 protected controls, 29/29 UX and 28/28 original parity browser tests; independent Phase2 adapter checks. Chrome below 30 percent on tested 320x568 viewport. Caveats: test-only injected transport cannot certify hosted HTTP, physical mobile devices or screen-reader navigation. GitHub deployment and future regression audits remain separate proof gates.
