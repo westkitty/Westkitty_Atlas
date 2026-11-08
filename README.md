@@ -38,3 +38,15 @@ This is a source-backed **visual exploration tool**, not a dependency scanner or
 - The public feed is an evidence snapshot, not a verified source-level audit of every repository. Proposed links require manual experiments.
 
 Browser smoke checks were run in isolated headless Chromium using the real Repo_Dex artifact as a mocked fetch response; the environment blocked direct navigation to the public hosted origin. The 18 checks are documented in `ATLAS_LIVE_QA.md`.
+
+## Atlas Pulse visibility repair (2026-11-08)
+
+The hosted atlas loads the latest **published Repo_Dex GitHub Actions feed**, but reloading that feed does **not** start a new scan. The scanner runs daily and can be dispatched through [Repo_Dex Actions](https://github.com/westkitty/Repo_Dex/actions/workflows/pages.yml).
+
+- Open Atlas Pulse from the inspector's **PULSE** subtitle on any screen or from the portfolio dock on wide desktops. Its update report now explains what was actually applied, which repository names differ from the original packaged 201-name inventory, and which links are evidence-backed versus unverified proposals.
+- The original curated project summaries remain historical. Select a project to see its *current published GitHub description, language, last public push and scan inspection status* separately. This prevents older interpretations from being mislabeled as current source verification.
+- The first scan is a baseline; only subsequent Repo_Dex snapshots can support a true since-last-scan delta. A successful recheck of the same published digest explicitly says no newer feed is available.
+- If the network or source validation fails, the most recent accepted graph remains. User-imported graphs remain untouched; Restore reapplies the most recently accepted public feed. The offline file continues to load its embedded snapshot.
+- The public scanner source-inspected 36 of 202 public repositories in its first published snapshot; the rest have public metadata coverage only. Recommendations are proposed experiments, not verified integrations.
+
+The repair's Chromium behavior checks and precise limits are in [ATLAS_LIVE_QA.md](ATLAS_LIVE_QA.md).
