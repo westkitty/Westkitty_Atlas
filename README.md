@@ -37,4 +37,4 @@ This is a source-backed **visual exploration tool**, not a dependency scanner or
 - Observations are changes relative to the Repo_Dex snapshot history; the first scan is a **baseline**, not a claim that every project was newly created.
 - The public feed is an evidence snapshot, not a verified source-level audit of every repository. Proposed links require manual experiments.
 
-Browser smoke checks were run in isolated headless Chromium using the real Repo_Dex artifact as a mocked fetch response; the environment blocked direct navigation to the public hosted origin. The 17 checks are documented in `ATLAS_LIVE_QA.md`.
+Browser smoke checks were run in isolated headless Chromium using the real Repo_Dex artifact as a mocked fetch response; the environment blocked direct navigation to the public hosted origin. The 18 checks are documented in `ATLAS_LIVE_QA.md`.
