@@ -1,0 +1,332 @@
+{
+  "title": "Project Constellation browser verification",
+  "snapshot": "2026-11-08",
+  "browser": "Chromium /usr/bin/chromium via Playwright headless (not physical Android)",
+  "tests": [
+    {
+      "name": "data schema and evidence invariants",
+      "result": "PASS",
+      "details": "201 public nodes, 37 README-reviewed, 45 edges, no orphan endpoints or uncited documented links"
+    },
+    {
+      "name": "synthetic sample graph initialized first",
+      "result": "PASS",
+      "details": {
+        "nodes": 6,
+        "edges": 4,
+        "reviewed": 6,
+        "visibleNodes": 6,
+        "visibleEdges": 4,
+        "view": "all",
+        "flat": false,
+        "low": false,
+        "selected": null,
+        "screenWidth": 1440,
+        "yaw": -0.25,
+        "pitch": 0.16,
+        "zoom": 1,
+        "showInventory": true
+      }
+    },
+    {
+      "name": "verified public source graph initializes offline",
+      "result": "PASS",
+      "details": {
+        "nodes": 201,
+        "edges": 45,
+        "reviewed": 37,
+        "visibleNodes": 123,
+        "visibleEdges": 45,
+        "view": "all",
+        "flat": false,
+        "low": false,
+        "selected": null,
+        "screenWidth": 1440,
+        "yaw": -0.25,
+        "pitch": 0.16,
+        "zoom": 1,
+        "showInventory": true
+      }
+    },
+    {
+      "name": "three evidence modes filter edges",
+      "result": "PASS",
+      "details": "25 documented, 20 proposed, 45 combined"
+    },
+    {
+      "name": "guided tour selects source-backed route",
+      "result": "PASS",
+      "details": {
+        "kind": "edge",
+        "id": "L024"
+      }
+    },
+    {
+      "name": "relationship evidence clickable and grounded",
+      "result": "PASS",
+      "details": "1 linked GitHub source citations"
+    },
+    {
+      "name": "selection history and inspector navigation",
+      "result": "PASS",
+      "details": "back/forward preserved named selections"
+    },
+    {
+      "name": "search keyboard option and selection",
+      "result": "PASS",
+      "details": "search result focus, Enter selection and inspector"
+    },
+    {
+      "name": "search empty state and Escape recovery",
+      "result": "PASS",
+      "details": "empty-state and Escape dismissal"
+    },
+    {
+      "name": "relationship and category filters",
+      "result": "PASS",
+      "details": "source-typed filter (21 shared technologies) plus family filter"
+    },
+    {
+      "name": "inventory density toggle",
+      "result": "PASS",
+      "details": "reviewed-only and all-public inventory controls"
+    },
+    {
+      "name": "flat fallback reversible",
+      "result": "PASS",
+      "details": "flat fallback and 3D restore"
+    },
+    {
+      "name": "keyboard orbit, zoom and reset",
+      "result": "PASS",
+      "details": "focused 3D canvas arrow and zoom shortcuts, Home camera reset"
+    },
+    {
+      "name": "pointer orbit and wheel zoom",
+      "result": "PASS",
+      "details": {
+        "yawChange": 0.5,
+        "zoomChange": 0.271
+      }
+    },
+    {
+      "name": "hypothetical relationship clearly distinguished",
+      "result": "PASS",
+      "details": {
+        "type": "data-exchange",
+        "status": "hypothetical"
+      }
+    },
+    {
+      "name": "JSON export contains complete provenance graph",
+      "result": "PASS",
+      "details": "export_roundtrip.json"
+    },
+    {
+      "name": "exported JSON imports successfully",
+      "result": "PASS",
+      "details": "201/45 round-trip validation and data reload"
+    },
+    {
+      "name": "bad import rejected without destructive replacement",
+      "result": "PASS",
+      "details": "invalid endpoint rejected, existing source snapshot intact"
+    },
+    {
+      "name": "restore authoritative built-in snapshot",
+      "result": "PASS",
+      "details": "built-in snapshot can be restored explicitly"
+    },
+    {
+      "name": "help dialog and focus recovery",
+      "result": "PASS",
+      "details": "native accessible dialog closes and restores focus"
+    },
+    {
+      "name": "runtime exceptions and offline network boundary",
+      "result": "PASS",
+      "details": "no console exceptions and no external resource requests after major user journeys"
+    },
+    {
+      "name": "responsive chrome and offline 320x568",
+      "result": "PASS",
+      "details": {
+        "viewport": [
+          320,
+          568
+        ],
+        "chromeFraction": 0.2741,
+        "errors": 0
+      }
+    },
+    {
+      "name": "responsive chrome and offline 360x640",
+      "result": "PASS",
+      "details": {
+        "viewport": [
+          360,
+          640
+        ],
+        "chromeFraction": 0.2652,
+        "errors": 0
+      }
+    },
+    {
+      "name": "responsive chrome and offline 390x844",
+      "result": "PASS",
+      "details": {
+        "viewport": [
+          390,
+          844
+        ],
+        "chromeFraction": 0.2458,
+        "errors": 0
+      }
+    },
+    {
+      "name": "phone search, panel and tour",
+      "result": "PASS",
+      "details": "mobile search, expand/collapse details and accessible tour"
+    },
+    {
+      "name": "responsive chrome and offline 480x800",
+      "result": "PASS",
+      "details": {
+        "viewport": [
+          480,
+          800
+        ],
+        "chromeFraction": 0.2513,
+        "errors": 0
+      }
+    },
+    {
+      "name": "responsive chrome and offline 700x900",
+      "result": "PASS",
+      "details": {
+        "viewport": [
+          700,
+          900
+        ],
+        "chromeFraction": 0.2454,
+        "errors": 0
+      }
+    },
+    {
+      "name": "responsive chrome and offline 701x900",
+      "result": "PASS",
+      "details": {
+        "viewport": [
+          701,
+          900
+        ],
+        "chromeFraction": 0.2648,
+        "errors": 0
+      }
+    },
+    {
+      "name": "responsive chrome and offline 800x1100",
+      "result": "PASS",
+      "details": {
+        "viewport": [
+          800,
+          1100
+        ],
+        "chromeFraction": 0.1969,
+        "errors": 0
+      }
+    },
+    {
+      "name": "responsive chrome and offline 980x640",
+      "result": "PASS",
+      "details": {
+        "viewport": [
+          980,
+          640
+        ],
+        "chromeFraction": 0.2614,
+        "errors": 0
+      }
+    },
+    {
+      "name": "responsive chrome and offline 1280x720",
+      "result": "PASS",
+      "details": {
+        "viewport": [
+          1280,
+          720
+        ],
+        "chromeFraction": 0.2473,
+        "errors": 0
+      }
+    },
+    {
+      "name": "responsive chrome and offline 1366x768",
+      "result": "PASS",
+      "details": {
+        "viewport": [
+          1366,
+          768
+        ],
+        "chromeFraction": 0.2705,
+        "errors": 0
+      }
+    },
+    {
+      "name": "responsive chrome and offline 1440x900",
+      "result": "PASS",
+      "details": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "chromeFraction": 0.2436,
+        "errors": 0
+      }
+    },
+    {
+      "name": "responsive chrome and offline 1920x1080",
+      "result": "PASS",
+      "details": {
+        "viewport": [
+          1920,
+          1080
+        ],
+        "chromeFraction": 0.1675,
+        "errors": 0
+      }
+    },
+    {
+      "name": "responsive chrome and offline 1100x500",
+      "result": "PASS",
+      "details": {
+        "viewport": [
+          1100,
+          500
+        ],
+        "chromeFraction": 0.2436,
+        "errors": 0
+      }
+    },
+    {
+      "name": "reduced-motion nonanimated presentation and interaction",
+      "result": "PASS",
+      "details": "low-effects mode at startup, node accessible in reduced motion"
+    }
+  ],
+  "screenshots": [
+    "sample_engine.png",
+    "desktop_final.png",
+    "mobile_320x568.png",
+    "mobile_390x844.png",
+    "mobile_800x1100.png"
+  ],
+  "caveats": [
+    "Local file navigation is blocked by the automation environment, so page.set_content() injected the complete offline HTML. This tests inline runtime and offline resource behavior but not device-specific file:// or PWA installation.",
+    "The runtime is perspective-projected Canvas 2D, not a WebGL renderer. It uses real 3D graph coordinates and supports rotation and zoom."
+  ],
+  "source_integrity": {},
+  "passed": 36,
+  "failed": 0,
+  "file_sha256": "aac45a074a0bf441c6f54e240eb16bfa15cef911b9fb8ca51e695520e6868d31"
+}

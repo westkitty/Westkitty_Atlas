@@ -1,0 +1,3230 @@
+{
+  "schema": "project-constellation/v1",
+  "snapshot": "2026-11-08",
+  "source": {
+    "account": "westkitty",
+    "basis": "GitHub repository search filtered to public, plus selected README and package.json inspection",
+    "metadataCoverage": "201 public repository names; node-specific README inspection for selected projects only",
+    "evidencePolicy": "Solid = documented fact supported by linked source files. Dashed = proposed integration; source docs establish premises, not the link. A package match is not shared source code."
+  },
+  "nodes": [
+    {
+      "id": "DexDictate_MacOS",
+      "name": "DexDictate_MacOS",
+      "kind": "repository",
+      "group": "local",
+      "summary": "Swift macOS dictation application.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/DexDictate_MacOS",
+      "source": "https://github.com/westkitty/DexDictate_MacOS/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "DexEarth",
+      "name": "DexEarth",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexEarth",
+      "source": "https://github.com/westkitty/DexEarth",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexTilt",
+      "name": "DexTilt",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexTilt",
+      "source": "https://github.com/westkitty/DexTilt",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexSpeak",
+      "name": "DexSpeak",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexSpeak",
+      "source": "https://github.com/westkitty/DexSpeak",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "AtlasOfOne",
+      "name": "AtlasOfOne",
+      "kind": "repository",
+      "group": "worlds",
+      "summary": "Local-first journal and adventure game with a Worldwalker map.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/AtlasOfOne",
+      "source": "https://github.com/westkitty/AtlasOfOne/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Dex_Hub",
+      "name": "Dex_Hub",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Dex_Hub",
+      "source": "https://github.com/westkitty/Dex_Hub",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "museum-of-me-vnext",
+      "name": "museum-of-me-vnext",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/museum-of-me-vnext",
+      "source": "https://github.com/westkitty/museum-of-me-vnext",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "sdxl-prompt-forge",
+      "name": "sdxl-prompt-forge",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/sdxl-prompt-forge",
+      "source": "https://github.com/westkitty/sdxl-prompt-forge",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexKeeper_Bot",
+      "name": "DexKeeper_Bot",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexKeeper_Bot",
+      "source": "https://github.com/westkitty/DexKeeper_Bot",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DEX-REACH",
+      "name": "DEX-REACH",
+      "kind": "repository",
+      "group": "infrastructure",
+      "summary": "Self-hosted policy-controlled remote computing MCP gateway.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/DEX-REACH",
+      "source": "https://github.com/westkitty/DEX-REACH/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "DexSort",
+      "name": "DexSort",
+      "kind": "repository",
+      "group": "local",
+      "summary": "Android-local image-archive review and sorting project; early-stage.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/DexSort",
+      "source": "https://github.com/westkitty/DexSort/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "c_chase",
+      "name": "c_chase",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/c_chase",
+      "source": "https://github.com/westkitty/c_chase",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "century_engine",
+      "name": "century_engine",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/century_engine",
+      "source": "https://github.com/westkitty/century_engine",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Starsilk_Leitmotif_Genome",
+      "name": "Starsilk_Leitmotif_Genome",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Starsilk_Leitmotif_Genome",
+      "source": "https://github.com/westkitty/Starsilk_Leitmotif_Genome",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Sprite_Foundry",
+      "name": "Sprite_Foundry",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Sprite_Foundry",
+      "source": "https://github.com/westkitty/Sprite_Foundry",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Impossible-machine",
+      "name": "Impossible-machine",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Impossible-machine",
+      "source": "https://github.com/westkitty/Impossible-machine",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DASH_LEDGER",
+      "name": "DASH_LEDGER",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DASH_LEDGER",
+      "source": "https://github.com/westkitty/DASH_LEDGER",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Genex_Plugins",
+      "name": "Genex_Plugins",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Genex_Plugins",
+      "source": "https://github.com/westkitty/Genex_Plugins",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Starsilk_Map_of_the_All",
+      "name": "Starsilk_Map_of_the_All",
+      "kind": "repository",
+      "group": "canon",
+      "summary": "Separate Starsilk spatial atlas; coordinates and routes are provisional drafts.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Starsilk_Map_of_the_All",
+      "source": "https://github.com/westkitty/Starsilk_Map_of_the_All/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Event-Horizon-Forge",
+      "name": "Event-Horizon-Forge",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Event-Horizon-Forge",
+      "source": "https://github.com/westkitty/Event-Horizon-Forge",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "modern_3d_browser_game_toolkit",
+      "name": "modern_3d_browser_game_toolkit",
+      "kind": "repository",
+      "group": "maker",
+      "summary": "Ten independently runnable 3D architectural demonstrations.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/modern_3d_browser_game_toolkit",
+      "source": "https://github.com/westkitty/modern_3d_browser_game_toolkit/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "DexDraw_vNext",
+      "name": "DexDraw_vNext",
+      "kind": "repository",
+      "group": "media",
+      "summary": "Local-first self-hosted collaborative whiteboard; storage/auth not production-ready.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/DexDraw_vNext",
+      "source": "https://github.com/westkitty/DexDraw_vNext/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "meme_factory",
+      "name": "meme_factory",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/meme_factory",
+      "source": "https://github.com/westkitty/meme_factory",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Civic_Godstorm",
+      "name": "Civic_Godstorm",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Civic_Godstorm",
+      "source": "https://github.com/westkitty/Civic_Godstorm",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "form-engine",
+      "name": "form-engine",
+      "kind": "repository",
+      "group": "maker",
+      "summary": "Browser-based WebGL2 sculpting studio with glTF/GLB/OBJ/STL export.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/form-engine",
+      "source": "https://github.com/westkitty/form-engine/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "propp-machine",
+      "name": "propp-machine",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/propp-machine",
+      "source": "https://github.com/westkitty/propp-machine",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Load_Log",
+      "name": "Load_Log",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Load_Log",
+      "source": "https://github.com/westkitty/Load_Log",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Dex_Quest_Maker",
+      "name": "Dex_Quest_Maker",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Dex_Quest_Maker",
+      "source": "https://github.com/westkitty/Dex_Quest_Maker",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Dex_Pulse",
+      "name": "Dex_Pulse",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Dex_Pulse",
+      "source": "https://github.com/westkitty/Dex_Pulse",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Multiverse_Simulator",
+      "name": "Multiverse_Simulator",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Multiverse_Simulator",
+      "source": "https://github.com/westkitty/Multiverse_Simulator",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Dex_Rig",
+      "name": "Dex_Rig",
+      "kind": "repository",
+      "group": "media",
+      "summary": "Dependency-free offline 2D animation and character-motion workbench.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Dex_Rig",
+      "source": "https://github.com/westkitty/Dex_Rig/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Parable",
+      "name": "Parable",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Parable",
+      "source": "https://github.com/westkitty/Parable",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "orbital_tomb_station_sim",
+      "name": "orbital_tomb_station_sim",
+      "kind": "repository",
+      "group": "worlds",
+      "summary": "Mobile-first, offline six-month remote-drone strategy and station simulation.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/orbital_tomb_station_sim",
+      "source": "https://github.com/westkitty/orbital_tomb_station_sim/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Starsilk_Character_Dossier",
+      "name": "Starsilk_Character_Dossier",
+      "kind": "repository",
+      "group": "canon",
+      "summary": "Source-driven Starsilk Compendium, including WorldsVault and Drakken register.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Starsilk_Character_Dossier",
+      "source": "https://github.com/westkitty/Starsilk_Character_Dossier/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Form_Engine-GPT",
+      "name": "Form_Engine-GPT",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Form_Engine-GPT",
+      "source": "https://github.com/westkitty/Form_Engine-GPT",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DEX_Meme_Factory",
+      "name": "DEX_Meme_Factory",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DEX_Meme_Factory",
+      "source": "https://github.com/westkitty/DEX_Meme_Factory",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Dexter_Walk_Forge",
+      "name": "Dexter_Walk_Forge",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Dexter_Walk_Forge",
+      "source": "https://github.com/westkitty/Dexter_Walk_Forge",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexStitch",
+      "name": "DexStitch",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexStitch",
+      "source": "https://github.com/westkitty/DexStitch",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "World_Machine",
+      "name": "World_Machine",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/World_Machine",
+      "source": "https://github.com/westkitty/World_Machine",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Project_Sentinel",
+      "name": "Project_Sentinel",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Project_Sentinel",
+      "source": "https://github.com/westkitty/Project_Sentinel",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexDictate_Android",
+      "name": "DexDictate_Android",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexDictate_Android",
+      "source": "https://github.com/westkitty/DexDictate_Android",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "ClearCut",
+      "name": "ClearCut",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/ClearCut",
+      "source": "https://github.com/westkitty/ClearCut",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Arkship",
+      "name": "Arkship",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Arkship",
+      "source": "https://github.com/westkitty/Arkship",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Dex_Claw_Hub",
+      "name": "Dex_Claw_Hub",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Dex_Claw_Hub",
+      "source": "https://github.com/westkitty/Dex_Claw_Hub",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "defunct_DEX-REACH.",
+      "name": "defunct_DEX-REACH.",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/defunct_DEX-REACH.",
+      "source": "https://github.com/westkitty/defunct_DEX-REACH.",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Starsilk_PWA_Mapper",
+      "name": "Starsilk_PWA_Mapper",
+      "kind": "repository",
+      "group": "canon",
+      "summary": "Offline-first Starsilk mapping PWA with a read-only canon reference boundary.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Starsilk_PWA_Mapper",
+      "source": "https://github.com/westkitty/Starsilk_PWA_Mapper/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Deeper",
+      "name": "Deeper",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Deeper",
+      "source": "https://github.com/westkitty/Deeper",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Elsewhere-Pages",
+      "name": "Elsewhere-Pages",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Elsewhere-Pages",
+      "source": "https://github.com/westkitty/Elsewhere-Pages",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DEX_3js",
+      "name": "DEX_3js",
+      "kind": "repository",
+      "group": "maker",
+      "summary": "Local macOS SwiftUI/AppKit launcher for Three.js projects.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/DEX_3js",
+      "source": "https://github.com/westkitty/DEX_3js/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Life_Sim",
+      "name": "Life_Sim",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Life_Sim",
+      "source": "https://github.com/westkitty/Life_Sim",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "chatterbot_dex",
+      "name": "chatterbot_dex",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/chatterbot_dex",
+      "source": "https://github.com/westkitty/chatterbot_dex",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Flit_Substitute_Doll",
+      "name": "Flit_Substitute_Doll",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Flit_Substitute_Doll",
+      "source": "https://github.com/westkitty/Flit_Substitute_Doll",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "spanish_translator",
+      "name": "spanish_translator",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/spanish_translator",
+      "source": "https://github.com/westkitty/spanish_translator",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "city_remembers",
+      "name": "city_remembers",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/city_remembers",
+      "source": "https://github.com/westkitty/city_remembers",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Drakken_Lineage",
+      "name": "Drakken_Lineage",
+      "kind": "repository",
+      "group": "canon",
+      "summary": "Three.js Drakken lineage laboratory with a canon-aware evidence model.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Drakken_Lineage",
+      "source": "https://github.com/westkitty/Drakken_Lineage/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "westkitty.github.io",
+      "name": "westkitty.github.io",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/westkitty.github.io",
+      "source": "https://github.com/westkitty/westkitty.github.io",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DnDex",
+      "name": "DnDex",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DnDex",
+      "source": "https://github.com/westkitty/DnDex",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "3js-VFX-platform",
+      "name": "3js-VFX-platform",
+      "kind": "repository",
+      "group": "maker",
+      "summary": "AetherVFX: deterministic 3D runtime spine and layered effects architecture.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/3js-VFX-platform",
+      "source": "https://github.com/westkitty/3js-VFX-platform/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "SpaceWise_Android",
+      "name": "SpaceWise_Android",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/SpaceWise_Android",
+      "source": "https://github.com/westkitty/SpaceWise_Android",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "visual_forge",
+      "name": "visual_forge",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/visual_forge",
+      "source": "https://github.com/westkitty/visual_forge",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexCleaner_MacOS",
+      "name": "DexCleaner_MacOS",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexCleaner_MacOS",
+      "source": "https://github.com/westkitty/DexCleaner_MacOS",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Coach_Edge",
+      "name": "Coach_Edge",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Coach_Edge",
+      "source": "https://github.com/westkitty/Coach_Edge",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "orbital_tomb_tour",
+      "name": "orbital_tomb_tour",
+      "kind": "repository",
+      "group": "worlds",
+      "summary": "Interactive Three.js first-person exploration of Meridian Station.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/orbital_tomb_tour",
+      "source": "https://github.com/westkitty/orbital_tomb_tour/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Vault_Architect",
+      "name": "Vault_Architect",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Vault_Architect",
+      "source": "https://github.com/westkitty/Vault_Architect",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Project_Forge",
+      "name": "Project_Forge",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Project_Forge",
+      "source": "https://github.com/westkitty/Project_Forge",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "https-github.com-westkitty-DexDraw_Redux",
+      "name": "https-github.com-westkitty-DexDraw_Redux",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/https-github.com-westkitty-DexDraw_Redux",
+      "source": "https://github.com/westkitty/https-github.com-westkitty-DexDraw_Redux",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Worldwalker",
+      "name": "Worldwalker",
+      "kind": "repository",
+      "group": "worlds",
+      "summary": "Local-first SNES-style exploration layer over project state.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Worldwalker",
+      "source": "https://github.com/westkitty/Worldwalker/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "The_Full_Weasel",
+      "name": "The_Full_Weasel",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/The_Full_Weasel",
+      "source": "https://github.com/westkitty/The_Full_Weasel",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Dexter_Desk_Familiar",
+      "name": "Dexter_Desk_Familiar",
+      "kind": "repository",
+      "group": "local",
+      "summary": "Privacy-first browser familiar with reference-derived poses and behavior engine.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Dexter_Desk_Familiar",
+      "source": "https://github.com/westkitty/Dexter_Desk_Familiar/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "dexPlay_westcat_rebuild",
+      "name": "dexPlay_westcat_rebuild",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/dexPlay_westcat_rebuild",
+      "source": "https://github.com/westkitty/dexPlay_westcat_rebuild",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "dexDraw",
+      "name": "dexDraw",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/dexDraw",
+      "source": "https://github.com/westkitty/dexDraw",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexCodeBudget",
+      "name": "DexCodeBudget",
+      "kind": "repository",
+      "group": "infrastructure",
+      "summary": "Native macOS menu-bar quota monitor for coding-agent services.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/DexCodeBudget",
+      "source": "https://github.com/westkitty/DexCodeBudget/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Repo_Dex",
+      "name": "Repo_Dex",
+      "kind": "repository",
+      "group": "infrastructure",
+      "summary": "Read-only GitHub portfolio observatory with hypothetical discovery candidates.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Repo_Dex",
+      "source": "https://github.com/westkitty/Repo_Dex/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Home_Plan",
+      "name": "Home_Plan",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Home_Plan",
+      "source": "https://github.com/westkitty/Home_Plan",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Dex_Scheduler",
+      "name": "Dex_Scheduler",
+      "kind": "repository",
+      "group": "local",
+      "summary": "Two-person mobile calendar PWA with personal scheduling features.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Dex_Scheduler",
+      "source": "https://github.com/westkitty/Dex_Scheduler/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Starsilk_Command",
+      "name": "Starsilk_Command",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Starsilk_Command",
+      "source": "https://github.com/westkitty/Starsilk_Command",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "local_sdxl_prompt_vault",
+      "name": "local_sdxl_prompt_vault",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/local_sdxl_prompt_vault",
+      "source": "https://github.com/westkitty/local_sdxl_prompt_vault",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexCraft",
+      "name": "DexCraft",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexCraft",
+      "source": "https://github.com/westkitty/DexCraft",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "MediaGetter_Redux",
+      "name": "MediaGetter_Redux",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/MediaGetter_Redux",
+      "source": "https://github.com/westkitty/MediaGetter_Redux",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Heroes_Tactics",
+      "name": "Heroes_Tactics",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Heroes_Tactics",
+      "source": "https://github.com/westkitty/Heroes_Tactics",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DEX_Sovereignty",
+      "name": "DEX_Sovereignty",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DEX_Sovereignty",
+      "source": "https://github.com/westkitty/DEX_Sovereignty",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexDictate_Monterey12.7",
+      "name": "DexDictate_Monterey12.7",
+      "kind": "repository",
+      "group": "local",
+      "summary": "Disposable Monterey compatibility probe for DexDictate’s SwiftWhisper path.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/DexDictate_Monterey12.7",
+      "source": "https://github.com/westkitty/DexDictate_Monterey12.7/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "AUTONOMOUS_GAME_STUDIO",
+      "name": "AUTONOMOUS_GAME_STUDIO",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/AUTONOMOUS_GAME_STUDIO",
+      "source": "https://github.com/westkitty/AUTONOMOUS_GAME_STUDIO",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Living_Universe",
+      "name": "Living_Universe",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Living_Universe",
+      "source": "https://github.com/westkitty/Living_Universe",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "ShakeDown",
+      "name": "ShakeDown",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/ShakeDown",
+      "source": "https://github.com/westkitty/ShakeDown",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "StarSilk_Maker",
+      "name": "StarSilk_Maker",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/StarSilk_Maker",
+      "source": "https://github.com/westkitty/StarSilk_Maker",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Dex_Pad",
+      "name": "Dex_Pad",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Dex_Pad",
+      "source": "https://github.com/westkitty/Dex_Pad",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "STARSILK-_Unmaking",
+      "name": "STARSILK-_Unmaking",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/STARSILK-_Unmaking",
+      "source": "https://github.com/westkitty/STARSILK-_Unmaking",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexCast",
+      "name": "DexCast",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexCast",
+      "source": "https://github.com/westkitty/DexCast",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Fixer_Fixed",
+      "name": "Fixer_Fixed",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Fixer_Fixed",
+      "source": "https://github.com/westkitty/Fixer_Fixed",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "The-Drakken-Terraforming-Laboratory_2",
+      "name": "The-Drakken-Terraforming-Laboratory_2",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/The-Drakken-Terraforming-Laboratory_2",
+      "source": "https://github.com/westkitty/The-Drakken-Terraforming-Laboratory_2",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "3.8flashtest",
+      "name": "3.8flashtest",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/3.8flashtest",
+      "source": "https://github.com/westkitty/3.8flashtest",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "gsun_ai",
+      "name": "gsun_ai",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/gsun_ai",
+      "source": "https://github.com/westkitty/gsun_ai",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "eevee_lab",
+      "name": "eevee_lab",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/eevee_lab",
+      "source": "https://github.com/westkitty/eevee_lab",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DEX_Wallpaper",
+      "name": "DEX_Wallpaper",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DEX_Wallpaper",
+      "source": "https://github.com/westkitty/DEX_Wallpaper",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "batch-analyzer",
+      "name": "batch-analyzer",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/batch-analyzer",
+      "source": "https://github.com/westkitty/batch-analyzer",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "FFMPEG_POCKET",
+      "name": "FFMPEG_POCKET",
+      "kind": "repository",
+      "group": "media",
+      "summary": "Local-first video and audio workshop, branded DEX//CUT.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/FFMPEG_POCKET",
+      "source": "https://github.com/westkitty/FFMPEG_POCKET/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "BonesWorks",
+      "name": "BonesWorks",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/BonesWorks",
+      "source": "https://github.com/westkitty/BonesWorks",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "GAMES_THAT_NEVER_EXISTED",
+      "name": "GAMES_THAT_NEVER_EXISTED",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/GAMES_THAT_NEVER_EXISTED",
+      "source": "https://github.com/westkitty/GAMES_THAT_NEVER_EXISTED",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "character-performance-capture",
+      "name": "character-performance-capture",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/character-performance-capture",
+      "source": "https://github.com/westkitty/character-performance-capture",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Game_Art_Director",
+      "name": "Game_Art_Director",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Game_Art_Director",
+      "source": "https://github.com/westkitty/Game_Art_Director",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Squirtle_Lab",
+      "name": "Squirtle_Lab",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Squirtle_Lab",
+      "source": "https://github.com/westkitty/Squirtle_Lab",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "starsilk_map_lmarena",
+      "name": "starsilk_map_lmarena",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/starsilk_map_lmarena",
+      "source": "https://github.com/westkitty/starsilk_map_lmarena",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Squirtle_Frontier",
+      "name": "Squirtle_Frontier",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Squirtle_Frontier",
+      "source": "https://github.com/westkitty/Squirtle_Frontier",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Private_Load",
+      "name": "Private_Load",
+      "kind": "repository",
+      "group": "local",
+      "summary": "Privacy-oriented local-first sequential guestbook with QR entry flow.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Private_Load",
+      "source": "https://github.com/westkitty/Private_Load/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Dex_Parse",
+      "name": "Dex_Parse",
+      "kind": "repository",
+      "group": "maker",
+      "summary": "Offline script parser that preserves source text and exports JSON.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Dex_Parse",
+      "source": "https://github.com/westkitty/Dex_Parse/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "modern_2d_browser_game_toolkit",
+      "name": "modern_2d_browser_game_toolkit",
+      "kind": "repository",
+      "group": "maker",
+      "summary": "Offline-capable 2D game architecture handbook and executable demos.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/modern_2d_browser_game_toolkit",
+      "source": "https://github.com/westkitty/modern_2d_browser_game_toolkit/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "orbital_scrapper",
+      "name": "orbital_scrapper",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/orbital_scrapper",
+      "source": "https://github.com/westkitty/orbital_scrapper",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "The_Living_Frontier",
+      "name": "The_Living_Frontier",
+      "kind": "repository",
+      "group": "worlds",
+      "summary": "Mobile-first open-world Three.js exploration game.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/The_Living_Frontier",
+      "source": "https://github.com/westkitty/The_Living_Frontier/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "DEX_Voice_Monologue",
+      "name": "DEX_Voice_Monologue",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DEX_Voice_Monologue",
+      "source": "https://github.com/westkitty/DEX_Voice_Monologue",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "THRESHOLD",
+      "name": "THRESHOLD",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/THRESHOLD",
+      "source": "https://github.com/westkitty/THRESHOLD",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "offer-scout",
+      "name": "offer-scout",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/offer-scout",
+      "source": "https://github.com/westkitty/offer-scout",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Rhetorical_InDEX",
+      "name": "Rhetorical_InDEX",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Rhetorical_InDEX",
+      "source": "https://github.com/westkitty/Rhetorical_InDEX",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "TCG_mechanics",
+      "name": "TCG_mechanics",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/TCG_mechanics",
+      "source": "https://github.com/westkitty/TCG_mechanics",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Tiny_Gods",
+      "name": "Tiny_Gods",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Tiny_Gods",
+      "source": "https://github.com/westkitty/Tiny_Gods",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Friday_Birthday",
+      "name": "Friday_Birthday",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Friday_Birthday",
+      "source": "https://github.com/westkitty/Friday_Birthday",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Planet_Killer",
+      "name": "Planet_Killer",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Planet_Killer",
+      "source": "https://github.com/westkitty/Planet_Killer",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Heroes_Tactics_AIStudio",
+      "name": "Heroes_Tactics_AIStudio",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Heroes_Tactics_AIStudio",
+      "source": "https://github.com/westkitty/Heroes_Tactics_AIStudio",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "MRGHJ",
+      "name": "MRGHJ",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/MRGHJ",
+      "source": "https://github.com/westkitty/MRGHJ",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Star_System_Planner",
+      "name": "Star_System_Planner",
+      "kind": "repository",
+      "group": "worlds",
+      "summary": "Offline-first Three.js / React star-system planning PWA.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Star_System_Planner",
+      "source": "https://github.com/westkitty/Star_System_Planner/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "OSINT_Dex",
+      "name": "OSINT_Dex",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/OSINT_Dex",
+      "source": "https://github.com/westkitty/OSINT_Dex",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "wc_2d_plat",
+      "name": "wc_2d_plat",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/wc_2d_plat",
+      "source": "https://github.com/westkitty/wc_2d_plat",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexSprite",
+      "name": "DexSprite",
+      "kind": "repository",
+      "group": "media",
+      "summary": "Offline SNES sprite-sheet, animation and playtest utility.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/DexSprite",
+      "source": "https://github.com/westkitty/DexSprite/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "DexGate",
+      "name": "DexGate",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexGate",
+      "source": "https://github.com/westkitty/DexGate",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "cascade",
+      "name": "cascade",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/cascade",
+      "source": "https://github.com/westkitty/cascade",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Immortals",
+      "name": "Immortals",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Immortals",
+      "source": "https://github.com/westkitty/Immortals",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Weaselworks",
+      "name": "Weaselworks",
+      "kind": "repository",
+      "group": "infrastructure",
+      "summary": "Local-first arcade and catalog for local apps and experiments.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Weaselworks",
+      "source": "https://github.com/westkitty/Weaselworks/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "the-world-between-two-frames",
+      "name": "the-world-between-two-frames",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/the-world-between-two-frames",
+      "source": "https://github.com/westkitty/the-world-between-two-frames",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "RepoForge",
+      "name": "RepoForge",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/RepoForge",
+      "source": "https://github.com/westkitty/RepoForge",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "sk",
+      "name": "sk",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/sk",
+      "source": "https://github.com/westkitty/sk",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Conversation_Lens",
+      "name": "Conversation_Lens",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Conversation_Lens",
+      "source": "https://github.com/westkitty/Conversation_Lens",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "flitdice",
+      "name": "flitdice",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/flitdice",
+      "source": "https://github.com/westkitty/flitdice",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "dex-dictate-v3",
+      "name": "dex-dictate-v3",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/dex-dictate-v3",
+      "source": "https://github.com/westkitty/dex-dictate-v3",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "OffGrid",
+      "name": "OffGrid",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/OffGrid",
+      "source": "https://github.com/westkitty/OffGrid",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Impossible_Physics_Arcade",
+      "name": "Impossible_Physics_Arcade",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Impossible_Physics_Arcade",
+      "source": "https://github.com/westkitty/Impossible_Physics_Arcade",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexEnhance",
+      "name": "DexEnhance",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexEnhance",
+      "source": "https://github.com/westkitty/DexEnhance",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "BigMac_Voice_Tools",
+      "name": "BigMac_Voice_Tools",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/BigMac_Voice_Tools",
+      "source": "https://github.com/westkitty/BigMac_Voice_Tools",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "FaceStuff",
+      "name": "FaceStuff",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/FaceStuff",
+      "source": "https://github.com/westkitty/FaceStuff",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Dex-Video-Code",
+      "name": "Dex-Video-Code",
+      "kind": "repository",
+      "group": "media",
+      "summary": "Prompt-first, medium-agnostic creative production coordinator and CLI.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Dex-Video-Code",
+      "source": "https://github.com/westkitty/Dex-Video-Code/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "DnDex_Redux",
+      "name": "DnDex_Redux",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DnDex_Redux",
+      "source": "https://github.com/westkitty/DnDex_Redux",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Guy_Cast",
+      "name": "Guy_Cast",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Guy_Cast",
+      "source": "https://github.com/westkitty/Guy_Cast",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "SilkBound",
+      "name": "SilkBound",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/SilkBound",
+      "source": "https://github.com/westkitty/SilkBound",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "westkitty",
+      "name": "westkitty",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/westkitty",
+      "source": "https://github.com/westkitty/westkitty",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Drakken_Field_Guide_to_Anatomy",
+      "name": "Drakken_Field_Guide_to_Anatomy",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Drakken_Field_Guide_to_Anatomy",
+      "source": "https://github.com/westkitty/Drakken_Field_Guide_to_Anatomy",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexGen",
+      "name": "DexGen",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexGen",
+      "source": "https://github.com/westkitty/DexGen",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "The-Drakken-Terraforming-Laboratory",
+      "name": "The-Drakken-Terraforming-Laboratory",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/The-Drakken-Terraforming-Laboratory",
+      "source": "https://github.com/westkitty/The-Drakken-Terraforming-Laboratory",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "2d_Game_Factory",
+      "name": "2d_Game_Factory",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/2d_Game_Factory",
+      "source": "https://github.com/westkitty/2d_Game_Factory",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "dash_ledger_grok",
+      "name": "dash_ledger_grok",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/dash_ledger_grok",
+      "source": "https://github.com/westkitty/dash_ledger_grok",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexFoundry",
+      "name": "DexFoundry",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexFoundry",
+      "source": "https://github.com/westkitty/DexFoundry",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Primordial-Engine-3D",
+      "name": "Primordial-Engine-3D",
+      "kind": "repository",
+      "group": "worlds",
+      "summary": "React Three Fiber procedural kingdom game, developed through additive repair.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Primordial-Engine-3D",
+      "source": "https://github.com/westkitty/Primordial-Engine-3D/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Flit_Substitute_Fey",
+      "name": "Flit_Substitute_Fey",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Flit_Substitute_Fey",
+      "source": "https://github.com/westkitty/Flit_Substitute_Fey",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Relay_Link",
+      "name": "Relay_Link",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Relay_Link",
+      "source": "https://github.com/westkitty/Relay_Link",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "https-github.com-westkitty-Relay_Link",
+      "name": "https-github.com-westkitty-Relay_Link",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/https-github.com-westkitty-Relay_Link",
+      "source": "https://github.com/westkitty/https-github.com-westkitty-Relay_Link",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "EndlessGrok",
+      "name": "EndlessGrok",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/EndlessGrok",
+      "source": "https://github.com/westkitty/EndlessGrok",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "dash_ledger_cc",
+      "name": "dash_ledger_cc",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/dash_ledger_cc",
+      "source": "https://github.com/westkitty/dash_ledger_cc",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "starlight-acre",
+      "name": "starlight-acre",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/starlight-acre",
+      "source": "https://github.com/westkitty/starlight-acre",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Heliocide_Viewer",
+      "name": "Heliocide_Viewer",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Heliocide_Viewer",
+      "source": "https://github.com/westkitty/Heliocide_Viewer",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexTalker",
+      "name": "DexTalker",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexTalker",
+      "source": "https://github.com/westkitty/DexTalker",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexDictate_ChromeOS",
+      "name": "DexDictate_ChromeOS",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexDictate_ChromeOS",
+      "source": "https://github.com/westkitty/DexDictate_ChromeOS",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Causal-Civilization-Engine",
+      "name": "Causal-Civilization-Engine",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Causal-Civilization-Engine",
+      "source": "https://github.com/westkitty/Causal-Civilization-Engine",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "chasm-of-the-plenum",
+      "name": "chasm-of-the-plenum",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/chasm-of-the-plenum",
+      "source": "https://github.com/westkitty/chasm-of-the-plenum",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "SNES_Dex",
+      "name": "SNES_Dex",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/SNES_Dex",
+      "source": "https://github.com/westkitty/SNES_Dex",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Deadlight_Pantheon",
+      "name": "Deadlight_Pantheon",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Deadlight_Pantheon",
+      "source": "https://github.com/westkitty/Deadlight_Pantheon",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Gay_Dex",
+      "name": "Gay_Dex",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Gay_Dex",
+      "source": "https://github.com/westkitty/Gay_Dex",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Form_Engine_CC",
+      "name": "Form_Engine_CC",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Form_Engine_CC",
+      "source": "https://github.com/westkitty/Form_Engine_CC",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexTCGMaker",
+      "name": "DexTCGMaker",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexTCGMaker",
+      "source": "https://github.com/westkitty/DexTCGMaker",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "character_sheet_archive",
+      "name": "character_sheet_archive",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/character_sheet_archive",
+      "source": "https://github.com/westkitty/character_sheet_archive",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "CivGen",
+      "name": "CivGen",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/CivGen",
+      "source": "https://github.com/westkitty/CivGen",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "SpaceWise",
+      "name": "SpaceWise",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/SpaceWise",
+      "source": "https://github.com/westkitty/SpaceWise",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Convergence_Living_Atlas",
+      "name": "Convergence_Living_Atlas",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Convergence_Living_Atlas",
+      "source": "https://github.com/westkitty/Convergence_Living_Atlas",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "The_Screen_Weasels",
+      "name": "The_Screen_Weasels",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/The_Screen_Weasels",
+      "source": "https://github.com/westkitty/The_Screen_Weasels",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "get_smudged",
+      "name": "get_smudged",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/get_smudged",
+      "source": "https://github.com/westkitty/get_smudged",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "StarSilk_Maker_Drifting",
+      "name": "StarSilk_Maker_Drifting",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/StarSilk_Maker_Drifting",
+      "source": "https://github.com/westkitty/StarSilk_Maker_Drifting",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Planet-Forge",
+      "name": "Planet-Forge",
+      "kind": "repository",
+      "group": "worlds",
+      "summary": "Interactive planetary observatory and seeded simulation game.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Planet-Forge",
+      "source": "https://github.com/westkitty/Planet-Forge/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Dex_WIFI",
+      "name": "Dex_WIFI",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Dex_WIFI",
+      "source": "https://github.com/westkitty/Dex_WIFI",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "audiodrama_heliocide",
+      "name": "audiodrama_heliocide",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/audiodrama_heliocide",
+      "source": "https://github.com/westkitty/audiodrama_heliocide",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Terminus_Harmonic",
+      "name": "Terminus_Harmonic",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Terminus_Harmonic",
+      "source": "https://github.com/westkitty/Terminus_Harmonic",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexDraw_Redux",
+      "name": "DexDraw_Redux",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexDraw_Redux",
+      "source": "https://github.com/westkitty/DexDraw_Redux",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Starsilk_Chronicles",
+      "name": "Starsilk_Chronicles",
+      "kind": "repository",
+      "group": "canon",
+      "summary": "Local-first Python/Tkinter tactical Starsilk exploration alpha.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Starsilk_Chronicles",
+      "source": "https://github.com/westkitty/Starsilk_Chronicles/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Doom_Map",
+      "name": "Doom_Map",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Doom_Map",
+      "source": "https://github.com/westkitty/Doom_Map",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Westcat_Familiar",
+      "name": "Westcat_Familiar",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Westcat_Familiar",
+      "source": "https://github.com/westkitty/Westcat_Familiar",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "pantheon-wars",
+      "name": "pantheon-wars",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/pantheon-wars",
+      "source": "https://github.com/westkitty/pantheon-wars",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "project_daemon",
+      "name": "project_daemon",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/project_daemon",
+      "source": "https://github.com/westkitty/project_daemon",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "DexOracle",
+      "name": "DexOracle",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/DexOracle",
+      "source": "https://github.com/westkitty/DexOracle",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "AnimateDex",
+      "name": "AnimateDex",
+      "kind": "repository",
+      "group": "media",
+      "summary": "SwiftUI still-image motion workbench with JSON projects and local MP4 proof.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/AnimateDex",
+      "source": "https://github.com/westkitty/AnimateDex/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "House_That_Learns",
+      "name": "House_That_Learns",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/House_That_Learns",
+      "source": "https://github.com/westkitty/House_That_Learns",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Bucky_Dash",
+      "name": "Bucky_Dash",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Bucky_Dash",
+      "source": "https://github.com/westkitty/Bucky_Dash",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Image_Gen",
+      "name": "Image_Gen",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Image_Gen",
+      "source": "https://github.com/westkitty/Image_Gen",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "welcome_to_vibe_coding",
+      "name": "welcome_to_vibe_coding",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/welcome_to_vibe_coding",
+      "source": "https://github.com/westkitty/welcome_to_vibe_coding",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Homo_Goetia",
+      "name": "Homo_Goetia",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Homo_Goetia",
+      "source": "https://github.com/westkitty/Homo_Goetia",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Gay_Cast_PWA",
+      "name": "Gay_Cast_PWA",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Gay_Cast_PWA",
+      "source": "https://github.com/westkitty/Gay_Cast_PWA",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Rune_Binding",
+      "name": "Rune_Binding",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Rune_Binding",
+      "source": "https://github.com/westkitty/Rune_Binding",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Flit_Doll",
+      "name": "Flit_Doll",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Flit_Doll",
+      "source": "https://github.com/westkitty/Flit_Doll",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "media-getter",
+      "name": "media-getter",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/media-getter",
+      "source": "https://github.com/westkitty/media-getter",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Worldseed",
+      "name": "Worldseed",
+      "kind": "repository",
+      "group": "worlds",
+      "summary": "Deep-time procedural planetary and civilization simulator.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Worldseed",
+      "source": "https://github.com/westkitty/Worldseed/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Heliocide_Viewer_dexgpt",
+      "name": "Heliocide_Viewer_dexgpt",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Heliocide_Viewer_dexgpt",
+      "source": "https://github.com/westkitty/Heliocide_Viewer_dexgpt",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "misuse_atlas",
+      "name": "misuse_atlas",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/misuse_atlas",
+      "source": "https://github.com/westkitty/misuse_atlas",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "World_Set",
+      "name": "World_Set",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/World_Set",
+      "source": "https://github.com/westkitty/World_Set",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Infinite_Creation",
+      "name": "Infinite_Creation",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Infinite_Creation",
+      "source": "https://github.com/westkitty/Infinite_Creation",
+      "sourceStatus": "Inventory only"
+    },
+    {
+      "id": "Code_Video",
+      "name": "Code_Video",
+      "kind": "repository",
+      "group": "media",
+      "summary": "Video production kernel and tested Blender film-contract demonstrator.",
+      "reviewed": true,
+      "url": "https://github.com/westkitty/Code_Video",
+      "source": "https://github.com/westkitty/Code_Video/blob/main/README.md",
+      "sourceStatus": "README inspected"
+    },
+    {
+      "id": "Dex_QR",
+      "name": "Dex_QR",
+      "kind": "repository",
+      "group": "unreviewed",
+      "summary": "Public repository verified by inventory. README/implementation not inspected for this release.",
+      "reviewed": false,
+      "url": "https://github.com/westkitty/Dex_QR",
+      "source": "https://github.com/westkitty/Dex_QR",
+      "sourceStatus": "Inventory only"
+    }
+  ],
+  "edges": [
+    {
+      "id": "L001",
+      "a": "Drakken_Lineage",
+      "b": "form-engine",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the three package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "Drakken_Lineage",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Drakken_Lineage/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        },
+        {
+          "repo": "form-engine",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/form-engine/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L002",
+      "a": "form-engine",
+      "b": "modern_3d_browser_game_toolkit",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the three package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "form-engine",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/form-engine/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        },
+        {
+          "repo": "modern_3d_browser_game_toolkit",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/modern_3d_browser_game_toolkit/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L003",
+      "a": "modern_3d_browser_game_toolkit",
+      "b": "3js-VFX-platform",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the three package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "modern_3d_browser_game_toolkit",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/modern_3d_browser_game_toolkit/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        },
+        {
+          "repo": "3js-VFX-platform",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/3js-VFX-platform/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L004",
+      "a": "3js-VFX-platform",
+      "b": "Primordial-Engine-3D",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the three package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "3js-VFX-platform",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/3js-VFX-platform/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        },
+        {
+          "repo": "Primordial-Engine-3D",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Primordial-Engine-3D/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L005",
+      "a": "Primordial-Engine-3D",
+      "b": "Star_System_Planner",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the three package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "Primordial-Engine-3D",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Primordial-Engine-3D/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        },
+        {
+          "repo": "Star_System_Planner",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Star_System_Planner/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L006",
+      "a": "Star_System_Planner",
+      "b": "Starsilk_PWA_Mapper",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the three package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "Star_System_Planner",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Star_System_Planner/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        },
+        {
+          "repo": "Starsilk_PWA_Mapper",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Starsilk_PWA_Mapper/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L007",
+      "a": "Starsilk_PWA_Mapper",
+      "b": "Starsilk_Map_of_the_All",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the three package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "Starsilk_PWA_Mapper",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Starsilk_PWA_Mapper/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        },
+        {
+          "repo": "Starsilk_Map_of_the_All",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Starsilk_Map_of_the_All/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L008",
+      "a": "Starsilk_Map_of_the_All",
+      "b": "Planet-Forge",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the three package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "Starsilk_Map_of_the_All",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Starsilk_Map_of_the_All/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        },
+        {
+          "repo": "Planet-Forge",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Planet-Forge/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L009",
+      "a": "Planet-Forge",
+      "b": "The_Living_Frontier",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the three package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "Planet-Forge",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Planet-Forge/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        },
+        {
+          "repo": "The_Living_Frontier",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/The_Living_Frontier/blob/main/package.json",
+          "note": "dependencies/devDependencies include three"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L010",
+      "a": "AtlasOfOne",
+      "b": "Weaselworks",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the react package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "AtlasOfOne",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/AtlasOfOne/blob/main/package.json",
+          "note": "dependencies/devDependencies include react"
+        },
+        {
+          "repo": "Weaselworks",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Weaselworks/blob/main/package.json",
+          "note": "dependencies/devDependencies include react"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L011",
+      "a": "Weaselworks",
+      "b": "Dex_Parse",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the react package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "Weaselworks",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Weaselworks/blob/main/package.json",
+          "note": "dependencies/devDependencies include react"
+        },
+        {
+          "repo": "Dex_Parse",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Dex_Parse/blob/main/package.json",
+          "note": "dependencies/devDependencies include react"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L012",
+      "a": "Dex_Parse",
+      "b": "Star_System_Planner",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the react package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "Dex_Parse",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Dex_Parse/blob/main/package.json",
+          "note": "dependencies/devDependencies include react"
+        },
+        {
+          "repo": "Star_System_Planner",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Star_System_Planner/blob/main/package.json",
+          "note": "dependencies/devDependencies include react"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L013",
+      "a": "Starsilk_PWA_Mapper",
+      "b": "3js-VFX-platform",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the react package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "Starsilk_PWA_Mapper",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Starsilk_PWA_Mapper/blob/main/package.json",
+          "note": "dependencies/devDependencies include react"
+        },
+        {
+          "repo": "3js-VFX-platform",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/3js-VFX-platform/blob/main/package.json",
+          "note": "dependencies/devDependencies include react"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L014",
+      "a": "modern_3d_browser_game_toolkit",
+      "b": "AtlasOfOne",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the vite package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "modern_3d_browser_game_toolkit",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/modern_3d_browser_game_toolkit/blob/main/package.json",
+          "note": "dependencies/devDependencies include vite"
+        },
+        {
+          "repo": "AtlasOfOne",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/AtlasOfOne/blob/main/package.json",
+          "note": "dependencies/devDependencies include vite"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L015",
+      "a": "AtlasOfOne",
+      "b": "Starsilk_Map_of_the_All",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the vite package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "AtlasOfOne",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/AtlasOfOne/blob/main/package.json",
+          "note": "dependencies/devDependencies include vite"
+        },
+        {
+          "repo": "Starsilk_Map_of_the_All",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Starsilk_Map_of_the_All/blob/main/package.json",
+          "note": "dependencies/devDependencies include vite"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L016",
+      "a": "Planet-Forge",
+      "b": "Weaselworks",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the vite package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "Planet-Forge",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Planet-Forge/blob/main/package.json",
+          "note": "dependencies/devDependencies include vite"
+        },
+        {
+          "repo": "Weaselworks",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Weaselworks/blob/main/package.json",
+          "note": "dependencies/devDependencies include vite"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L017",
+      "a": "DEX-REACH",
+      "b": "Dex-Video-Code",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the typescript package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "DEX-REACH",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/DEX-REACH/blob/main/package.json",
+          "note": "dependencies/devDependencies include typescript"
+        },
+        {
+          "repo": "Dex-Video-Code",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Dex-Video-Code/blob/main/package.json",
+          "note": "dependencies/devDependencies include typescript"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L018",
+      "a": "Dex-Video-Code",
+      "b": "AtlasOfOne",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the typescript package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "Dex-Video-Code",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Dex-Video-Code/blob/main/package.json",
+          "note": "dependencies/devDependencies include typescript"
+        },
+        {
+          "repo": "AtlasOfOne",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/AtlasOfOne/blob/main/package.json",
+          "note": "dependencies/devDependencies include typescript"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L019",
+      "a": "AtlasOfOne",
+      "b": "form-engine",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the typescript package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "AtlasOfOne",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/AtlasOfOne/blob/main/package.json",
+          "note": "dependencies/devDependencies include typescript"
+        },
+        {
+          "repo": "form-engine",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/form-engine/blob/main/package.json",
+          "note": "dependencies/devDependencies include typescript"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L020",
+      "a": "3js-VFX-platform",
+      "b": "Star_System_Planner",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the typescript package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "3js-VFX-platform",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/3js-VFX-platform/blob/main/package.json",
+          "note": "dependencies/devDependencies include typescript"
+        },
+        {
+          "repo": "Star_System_Planner",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Star_System_Planner/blob/main/package.json",
+          "note": "dependencies/devDependencies include typescript"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L021",
+      "a": "DEX-REACH",
+      "b": "Dex_Parse",
+      "type": "shared-tech",
+      "status": "documented",
+      "why": "Both current package.json manifests list the zod package. This proves a shared technology, not reusable code or interoperability.",
+      "evidence": [
+        {
+          "repo": "DEX-REACH",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/DEX-REACH/blob/main/package.json",
+          "note": "dependencies/devDependencies include zod"
+        },
+        {
+          "repo": "Dex_Parse",
+          "path": "package.json",
+          "url": "https://github.com/westkitty/Dex_Parse/blob/main/package.json",
+          "note": "dependencies/devDependencies include zod"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L022",
+      "a": "AtlasOfOne",
+      "b": "Worldwalker",
+      "type": "related-function",
+      "status": "documented",
+      "why": "AtlasOfOne README explicitly describes its Worldwalker map and Worldwalker-era application baseline. This is an acknowledged product relationship, not proof of a package dependency.",
+      "evidence": [
+        {
+          "repo": "AtlasOfOne",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/AtlasOfOne/blob/main/README.md",
+          "note": "Worldwalker map; Worldwalker-era application baseline"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L023",
+      "a": "Starsilk_PWA_Mapper",
+      "b": "Star_System_Planner",
+      "type": "dependency",
+      "status": "documented",
+      "why": "The PWA Mapper README declares Star_System_Planner as its implementation repository. This is a documented implementation reference; no runtime package import was established.",
+      "evidence": [
+        {
+          "repo": "Starsilk_PWA_Mapper",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Starsilk_PWA_Mapper/blob/main/README.md",
+          "note": "Implementation Repository: westkitty/Star_System_Planner"
+        }
+      ],
+      "constraint": "Implementation repository claim; no runtime dependency proven"
+    },
+    {
+      "id": "L024",
+      "a": "Starsilk_PWA_Mapper",
+      "b": "Starsilk_Character_Dossier",
+      "type": "dependency",
+      "status": "documented",
+      "why": "The PWA Mapper README names Starsilk_Character_Dossier as its strictly read-only canon reference. This is a source-authority dependency, not an editable data link.",
+      "evidence": [
+        {
+          "repo": "Starsilk_PWA_Mapper",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Starsilk_PWA_Mapper/blob/main/README.md",
+          "note": "Canon Reference: westkitty/Starsilk_Character_Dossier (strictly read-only)"
+        }
+      ],
+      "constraint": "Read-only canon authority; never treat as permission to write"
+    },
+    {
+      "id": "L025",
+      "a": "DexDictate_Monterey12.7",
+      "b": "DexDictate_MacOS",
+      "type": "related-function",
+      "status": "documented",
+      "why": "The Monterey probe README states it was built to test the specific DexDictate SwiftWhisper/whisper.cpp path before porting the real app.",
+      "evidence": [
+        {
+          "repo": "DexDictate_Monterey12.7",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/DexDictate_Monterey12.7/blob/main/README.md",
+          "note": "compatibility probe for DexDictate exact path"
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L026",
+      "a": "Starsilk_Character_Dossier",
+      "b": "Starsilk_Map_of_the_All",
+      "type": "data-exchange",
+      "status": "hypothetical",
+      "why": "A one-way, provenance-carrying export of stable WorldsVault identity and relationships could inform the draft map without inventing canonical coordinates.",
+      "evidence": [
+        {
+          "repo": "Starsilk_Character_Dossier",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Starsilk_Character_Dossier/blob/main/README.md",
+          "note": "WorldsVault corpus"
+        },
+        {
+          "repo": "Starsilk_Map_of_the_All",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Starsilk_Map_of_the_All/blob/main/README.md",
+          "note": "draft coordinates are not canon"
+        }
+      ],
+      "constraint": "No coordinates invented. Read-only source. Approval required."
+    },
+    {
+      "id": "L027",
+      "a": "Starsilk_Map_of_the_All",
+      "b": "Drakken_Lineage",
+      "type": "data-exchange",
+      "status": "hypothetical",
+      "why": "Could show lineage entities as semantic overlays without treating Drakken biology as geography.",
+      "evidence": [
+        {
+          "repo": "Drakken_Lineage",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Drakken_Lineage/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "Starsilk_Map_of_the_All",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Starsilk_Map_of_the_All/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": "Do not promote draft positions or biologic classifications to canon."
+    },
+    {
+      "id": "L028",
+      "a": "FFMPEG_POCKET",
+      "b": "Dex-Video-Code",
+      "type": "data-exchange",
+      "status": "hypothetical",
+      "why": "Could hand a verified bounded edit plan or media export into a local production pipeline; no existing adapter was verified.",
+      "evidence": [
+        {
+          "repo": "FFMPEG_POCKET",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/FFMPEG_POCKET/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "Dex-Video-Code",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Dex-Video-Code/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L029",
+      "a": "Dex-Video-Code",
+      "b": "Code_Video",
+      "type": "data-exchange",
+      "status": "hypothetical",
+      "why": "Could exchange a narrow, versioned shot contract between coordination and a tested rendering kernel.",
+      "evidence": [
+        {
+          "repo": "Dex-Video-Code",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Dex-Video-Code/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "Code_Video",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Code_Video/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": "The kernel is not a generalized autonomous studio."
+    },
+    {
+      "id": "L030",
+      "a": "AnimateDex",
+      "b": "Dex_Rig",
+      "type": "data-exchange",
+      "status": "hypothetical",
+      "why": "A tested interchange could map rig keyframes into a still-sequence or motion-preset delivery pipeline.",
+      "evidence": [
+        {
+          "repo": "AnimateDex",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/AnimateDex/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "Dex_Rig",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Dex_Rig/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": "No shared interchange format has been verified."
+    },
+    {
+      "id": "L031",
+      "a": "Repo_Dex",
+      "b": "Worldwalker",
+      "type": "data-exchange",
+      "status": "hypothetical",
+      "why": "An approved read-only metadata export could supply project-state landmarks without importing private project details.",
+      "evidence": [
+        {
+          "repo": "Repo_Dex",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Repo_Dex/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "Worldwalker",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Worldwalker/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": "Restrict to public metadata; do not equate commits with approval."
+    },
+    {
+      "id": "L032",
+      "a": "form-engine",
+      "b": "Primordial-Engine-3D",
+      "type": "reusable-components",
+      "status": "hypothetical",
+      "why": "GLB export might support user-approved world props if scale, materials, licenses and performance are verified.",
+      "evidence": [
+        {
+          "repo": "form-engine",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/form-engine/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "Primordial-Engine-3D",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Primordial-Engine-3D/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": "No actual asset compatibility test was run."
+    },
+    {
+      "id": "L033",
+      "a": "3js-VFX-platform",
+      "b": "The_Living_Frontier",
+      "type": "reusable-components",
+      "status": "hypothetical",
+      "why": "AetherVFX runtime lifecycle patterns might be adapted to the outdoor Three.js world, subject to API and performance checks.",
+      "evidence": [
+        {
+          "repo": "3js-VFX-platform",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/3js-VFX-platform/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "The_Living_Frontier",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/The_Living_Frontier/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L034",
+      "a": "DexSprite",
+      "b": "modern_2d_browser_game_toolkit",
+      "type": "reusable-components",
+      "status": "hypothetical",
+      "why": "Hardware-accurate sprite-sheet outputs could become a tested demo input for the 2D browser toolkit.",
+      "evidence": [
+        {
+          "repo": "DexSprite",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/DexSprite/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "modern_2d_browser_game_toolkit",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/modern_2d_browser_game_toolkit/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L035",
+      "a": "Dex_Parse",
+      "b": "Weaselworks",
+      "type": "reusable-components",
+      "status": "hypothetical",
+      "why": "Could reuse explicit local export and validation patterns in catalog tooling; similar libraries do not establish compatible code.",
+      "evidence": [
+        {
+          "repo": "Dex_Parse",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Dex_Parse/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "Weaselworks",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Weaselworks/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L036",
+      "a": "Dex_Rig",
+      "b": "Dexter_Desk_Familiar",
+      "type": "common-assets",
+      "status": "hypothetical",
+      "why": "Could evaluate a shared approved character-motion asset pipeline, but the Dex Rig README explicitly says it does not replace or modify Dexter Desk Familiar.",
+      "evidence": [
+        {
+          "repo": "Dex_Rig",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Dex_Rig/blob/main/README.md",
+          "note": "any future integration requires preview"
+        },
+        {
+          "repo": "Dexter_Desk_Familiar",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Dexter_Desk_Familiar/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": "Approved likeness and animation fidelity must be verified; no shared asset proven."
+    },
+    {
+      "id": "L037",
+      "a": "DexSprite",
+      "b": "Dexter_Desk_Familiar",
+      "type": "common-assets",
+      "status": "hypothetical",
+      "why": "A rights-cleared sprite-format conversion could support familiar sprite studies, if actual assets are supplied and tested.",
+      "evidence": [
+        {
+          "repo": "DexSprite",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/DexSprite/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "Dexter_Desk_Familiar",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Dexter_Desk_Familiar/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": "No same-file or shared-asset hash established."
+    },
+    {
+      "id": "L038",
+      "a": "FFMPEG_POCKET",
+      "b": "AnimateDex",
+      "type": "common-assets",
+      "status": "hypothetical",
+      "why": "The same user-owned image sequences could be processed by both media workbenches after explicit export/import testing.",
+      "evidence": [
+        {
+          "repo": "FFMPEG_POCKET",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/FFMPEG_POCKET/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "AnimateDex",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/AnimateDex/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": "No existing shared storage or identical assets confirmed."
+    },
+    {
+      "id": "L039",
+      "a": "Planet-Forge",
+      "b": "Worldseed",
+      "type": "related-function",
+      "status": "hypothetical",
+      "why": "Both documents describe simulated planetary worlds; a shared seed/assumptions comparison would be an experiment, not proven engine compatibility.",
+      "evidence": [
+        {
+          "repo": "Planet-Forge",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Planet-Forge/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "Worldseed",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Worldseed/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L040",
+      "a": "Starsilk_Character_Dossier",
+      "b": "Drakken_Lineage",
+      "type": "related-function",
+      "status": "hypothetical",
+      "why": "Both describe Drakken knowledge; a canon-linked dossier-to-lineage explainer could be built with strict authority and taxonomy checks.",
+      "evidence": [
+        {
+          "repo": "Starsilk_Character_Dossier",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Starsilk_Character_Dossier/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "Drakken_Lineage",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Drakken_Lineage/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": "Do not infer written canon or morphology from visual similarity."
+    },
+    {
+      "id": "L041",
+      "a": "DexSprite",
+      "b": "AnimateDex",
+      "type": "related-function",
+      "status": "hypothetical",
+      "why": "Sprite-sheet compilation and image-sequence motion production can form a staged production workflow after file-format proof.",
+      "evidence": [
+        {
+          "repo": "DexSprite",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/DexSprite/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "AnimateDex",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/AnimateDex/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": ""
+    },
+    {
+      "id": "L042",
+      "a": "Worldwalker",
+      "b": "Weaselworks",
+      "type": "related-function",
+      "status": "hypothetical",
+      "why": "A read-only project-state landmark could open the corresponding authorized local cartridge; no direct launch integration is verified.",
+      "evidence": [
+        {
+          "repo": "Worldwalker",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Worldwalker/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "Weaselworks",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Weaselworks/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": "Avoid executing commands from untrusted catalog metadata."
+    },
+    {
+      "id": "L043",
+      "a": "DexCodeBudget",
+      "b": "DEX-REACH",
+      "type": "data-exchange",
+      "status": "hypothetical",
+      "why": "An optional credential-free capacity summary could inform job admission without granting remote execution authority.",
+      "evidence": [
+        {
+          "repo": "DexCodeBudget",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/DexCodeBudget/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "DEX-REACH",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/DEX-REACH/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": "Quota status is not a scheduling capability or permission grant."
+    },
+    {
+      "id": "L044",
+      "a": "Star_System_Planner",
+      "b": "Starsilk_Map_of_the_All",
+      "type": "related-function",
+      "status": "hypothetical",
+      "why": "Related astronomy/worldbuilding visualization roles might allow a controlled file handoff; README states these remain separate projects.",
+      "evidence": [
+        {
+          "repo": "Starsilk_Map_of_the_All",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Starsilk_Map_of_the_All/blob/main/README.md",
+          "note": "separate live project"
+        }
+      ],
+      "constraint": "Keep source identities and canonical authority separate."
+    },
+    {
+      "id": "L045",
+      "a": "The_Living_Frontier",
+      "b": "Planet-Forge",
+      "type": "related-function",
+      "status": "hypothetical",
+      "why": "Their separate 3D worlds could be compared for landscape scale and presentation, without assuming shared terrain code.",
+      "evidence": [
+        {
+          "repo": "The_Living_Frontier",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/The_Living_Frontier/blob/main/README.md",
+          "note": ""
+        },
+        {
+          "repo": "Planet-Forge",
+          "path": "README.md",
+          "url": "https://github.com/westkitty/Planet-Forge/blob/main/README.md",
+          "note": ""
+        }
+      ],
+      "constraint": ""
+    }
+  ]
+}
