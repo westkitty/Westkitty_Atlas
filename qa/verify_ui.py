@@ -27,5 +27,10 @@ for token in ('const LIVE_FEED','function graphFromLive','function validateLiveF
 assert 'window.RepoDexDecisions' in html
 assert 'documented' in html and 'hypothetical' in html
 assert 'prefers-reduced-motion' in html
+assert 'card.dataset.opportunityId=op.id' in html, 'review needs stable focus identity'
+assert "window.addEventListener('repo-dex-decisions-changed'" in html
+assert "role==='reason'" in html, 'review should preserve reason-input focus'
+assert "el.detail.querySelector('.review-toolbar select')" in html, 'filtered-out decisions must preserve keyboard path'
+assert "list.querySelectorAll('.index-entry')[previous]?.focus" in html, 'text-index pagination should retain focus'
 assert re.search(r'<script[^>]*id="constellation-data"',html)
 print(f'PASS: {len(legacy)} protected controls, {len(p.ids)} unique element IDs, task navigation, public-only feed, offline assets')
