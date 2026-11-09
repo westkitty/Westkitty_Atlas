@@ -46,3 +46,17 @@ Active candidate: COOL-20261108-ATLAS-05 / five bounded improvements
 - Verified deployment: a live GitHub Pages HTTP 200 response read from Big Mac had SHA-256 `d4f8682218ba13140c5bd46502aa74bcf5859d75e6ace5418b7963809b9c783b`, exactly matching the locally tested HTML bytes. This establishes deployed source identity, not end-user interaction proof.
 - Outstanding: physical mobile touch, screen-reader testing, and direct hosted-browser interaction remain unverified. The local `set_content` harness models localStorage because direct file/local navigation was blocked in the test environment.
 - Rollback: revert the bounded Atlas `index.html` change only. Repo_Dex source, scanner, feed, and local decision schema are untouched.
+
+## 2026-11-08 local / 2026-11-09 UTC — Celestial Cartography visual finishing release
+
+- Source: `index.html` at `f868a83217a5269ab79686e2c37cfbda8e720e0c`; Git blob `30886c36f29ed48dab08dece645a461b7aa70e88`.
+- User-directed outcome: premium visual finishing of the existing playable Canvas 2D repository atlas; not a new game, renderer framework, gameplay model, or fabricated character/level system.
+- Art direction: cinematic astronomic cartography with layered offline starfield, nebula ambience, faint navigation graticule, illuminated crystalline reviewed nodes, restrained dim inventory marks, richer labeled family orbits, and documented-vs-proposed luminous routes.
+- CSS/UI: coherent high-contrast dark-sapphire, frosted controls, cyan scientific signals, amber hypotheses, polished panel/toolbar/tabs, visible focus maintained.
+- Motion/performance: existing single rAF clock reused and capped near 18 drawn frames/s while idle; no second animation loop. Reduced motion, low-quality mode, hidden pages, and large imported graphs suppress nonessential motion. Static background is prerendered on resize; no external assets or new dependencies.
+- Protected verified invariants: 201 original packaged repositories, 45 original links, original inline JSON and local-only RepoDex decision ledger unchanged byte-for-byte. Search, tabs, evidence, views, map interaction, guided tour, tools, import/export/restore, floating workspace preserved.
+- Locally verified (Chromium with a modeled storage shim): 33 protected controls / 65 unique element IDs; five viewport interaction journeys; three view modes; orbit, flat, selection, family/relation filters, quality controls, search, review and discover routes; touch-emulated mobile; text index, tour, JSON export, maximum allowed 600-node/3,000-edge synthetic import, and built-in restore. No browser page exceptions observed.
+- Render-time observation: headless Chromium rAF wrapper p95 ~1.4–1.6 ms in normal motion during the bounded sample, not an end-user compositor FPS guarantee. Reduced-motion runtime did not persist an idle render loop.
+- Deployment verified from Big Mac: GitHub Pages HTTP 200 and live response SHA-256 `e1b9e6abd11013d2fc542b1d236235f331114456f5f60aa6b2908d25f76b6627` exactly matching the packaged source.
+- Remaining unverified: physical-device touch, full assistive-tech screen-reader journeys, live interactive browser replay against GitHub Pages. The local tests and exact live file hash do not prove those experiences. Performance evidence is a bounded headless sample, not a field-device benchmark.
+- Rollback: revert only the visual `index.html` release commit; Repo_Dex feed and decision schema were not modified.
