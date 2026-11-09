@@ -73,3 +73,16 @@ Active candidate: COOL-20261108-ATLAS-05 / five bounded improvements
 - Deployment: GitHub default-branch content and hash verified. Live Pages byte readback unavailable because DEX//REACH connector failed and sandbox network DNS was unavailable. Do not upgrade to live-browser proof absent a successful direct test.
 - Remaining: physical touch, screen-reader, deployed-page user-journey verification; user feedback on visual direction.
 - Rollback: revert the single `index.html` visual-change commit; retain independent QA guard and operational-state history unless invalidated. Repo_Dex itself was not changed.
+
+## 2026-11-08 local / 2026-11-09 UTC — Quiet Sky — reduced clutter and smooth motion
+
+- User-reported defect: previous Observatory Survey release was too dense, the animations looked significantly choppier, and the atmosphere did not read as a proper starfield.
+- Baseline source: `index.html` blob `d345c219e6ad8f65d3410e9aa72906a6872b582b`. Root cause confirmed in source and Chromium: `state.lastFrame<55` throttled most ambient redraws to about 15 FPS (66.6 ms median interval at 1108x736, selected state).
+- Bounded repair: `index.html` commit `d2f9b3e2605de93730b30b174630ce844cdbb1b6`, blob `3f4ac435c3621587554702545831bf6c658a0413`. Replaced graticule/sector orbits and busy linework with a deterministic cached three-depth starfield and soft galaxy haze. Reduced default route opacity, focused selection/hover connections, reduced label density and unnecessary glows, narrowed hover target to prevent inadvertent emphasis. Retained existing Canvas renderer and one RAF owner; removed 55 ms presentational throttle and stopped idle redraws.
+- Protected: original 201 packaged repositories, 45 original relationships and inline graph SHA-256 `9fab02102e0b2ce0ab39e890e9ba5f6c031944af9bf00d287bd8774263881e9d`, evidence/proposal distinction, local decision state, search, Explore/Discover/Review, filters, history, guided tour, mobile, import/export/restore, floating workspace; no external assets or dependencies.
+- Validation: all 33 original UI controls and 65 IDs static guard PASS; five viewport workspace/keyboard/drag/persistence journeys PASS; text index, tour, export, synthetic 600-node/3,000-edge import and restore PASS; three browser preview states and reduced-motion behavior PASS without page exceptions.
+- Matched headless Chromium drawing measurement at 1108x736: selected previous ~15 FPS (66.6 ms median draw interval), selected Quiet Sky ~58 FPS (16.5 ms median), idle Quiet Sky no sustained redraws, reduced-motion no sustained ambient redraws. This is bounded automation, not a physical-device FPS claim.
+- Deployment: live GitHub Pages HTTP 200 from Big Mac, complete HTML SHA-256 `0a4378aee8248c54b00feaafb06ad78540868b5278ec9ec49baaf067531c8038` matching local tested source exactly.
+- Regression added: `qa/verify_quiet_sky.py` commit `98399b62d6732466beeb2d9711c27d52755e16ad`, locally executed PASS.
+- Remains unverified: real-device browser experience, Brave-specific environment, physical touch, full screen-reader journey, extended-duration thermal performance.
+- Rollback: revert only the above `index.html` commit; do not revert graph data, private decisions, unrelated repository changes or QA history.
