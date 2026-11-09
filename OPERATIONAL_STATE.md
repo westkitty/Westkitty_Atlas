@@ -60,3 +60,16 @@ Active candidate: COOL-20261108-ATLAS-05 / five bounded improvements
 - Deployment verified from Big Mac: GitHub Pages HTTP 200 and live response SHA-256 `e1b9e6abd11013d2fc542b1d236235f331114456f5f60aa6b2908d25f76b6627` exactly matching the packaged source.
 - Remaining unverified: physical-device touch, full assistive-tech screen-reader journeys, live interactive browser replay against GitHub Pages. The local tests and exact live file hash do not prove those experiences. Performance evidence is a bounded headless sample, not a field-device benchmark.
 - Rollback: revert only the visual `index.html` release commit; Repo_Dex feed and decision schema were not modified.
+
+## 2026-11-08 local / 2026-11-09 UTC — Observatory Survey visual and navigation polish
+
+- User objective: another substantial visual finishing pass on Project Constellation, preserving the existing interactive repository atlas rather than converting it into an unrelated game.
+- Baseline: visually finished HTML from `f868a83217a5269ab79686e2c37cfbda8e720e0c`, HTML blob `30886c36f29ed48dab08dece645a461b7aa70e88`.
+- Implementation: `index.html` commit `30959a3255a30cf756fa84a5530b8dccd836624c`, blob `d345c219e6ad8f65d3410e9aa72906a6872b582b`, SHA-256 `aec0caa1b0bc59777e12bf9aac9b667a0d46863eccaec713fe2b4ddd7bde9ba0`. Small scope; no external asset or renderer package.
+- New visual grammar: an observatory survey chart with a cached stellar river, calibrated azimuth rings and frame ticks, stronger warm-ink interface contrast, family-specific node silhouettes and center glyphs, hover-connected route emphasis, and selection/hover reticles rendered by the existing Canvas clock.
+- Protected invariants: all 201 public packaged repositories and 45 mapped relationships, unchanged inline data SHA-256 `9fab02102e0b2ce0ab39e890e9ba5f6c031944af9bf00d287bd8774263881e9d`; unchanged inline RepoDex private-decision helper; preserved search, filters, evidence inspector, tour, text index, graph import/export/restore and movable workspace.
+- QA added to repository: `qa/verify_visual_invariants.py` commit `ab57af331bcb11b34efb3c9e9a077e4f1636b7af`. The static original UI guard passed 33 protected controls and 65 unique IDs; workspace interactions passed five viewports; text index, tour, export and full synthetic 600-node/3,000-edge import/restore passed; visual tests passed five viewport modes plus search, filters, orbit/flat, quality and reduced motion. No unexpected page exceptions in those paths.
+- Short headless Chromium measurement at 1440x900: previous p95 rAF callback 6.2 ms versus new 4.9 ms; 390x844 in reduced-motion mode retained only two initialization draws. This does not establish physical-device FPS, accessibility compliance or a production performance guarantee.
+- Deployment: GitHub default-branch content and hash verified. Live Pages byte readback unavailable because DEX//REACH connector failed and sandbox network DNS was unavailable. Do not upgrade to live-browser proof absent a successful direct test.
+- Remaining: physical touch, screen-reader, deployed-page user-journey verification; user feedback on visual direction.
+- Rollback: revert the single `index.html` visual-change commit; retain independent QA guard and operational-state history unless invalidated. Repo_Dex itself was not changed.
