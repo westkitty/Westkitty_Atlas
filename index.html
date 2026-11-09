@@ -200,6 +200,19 @@
 @media(max-width:380px){.identity h1{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.view-btn,.icon-btn,.task-nav button{transition:none!important}}
 
+
+/* Deep-sky presentation: reduce chrome density so the stars and actual map carry the scene. */
+#app{background:#01040e}
+#app::after{opacity:.035;mix-blend-mode:normal}
+#topbar{background:linear-gradient(110deg,rgba(4,13,28,.96),rgba(8,23,40,.94),rgba(4,12,27,.96));border-color:rgba(133,182,205,.25);box-shadow:0 10px 32px rgba(0,0,0,.52),inset 0 1px rgba(210,234,245,.09)}
+#topbar::before{opacity:.38}
+#panel{background:linear-gradient(151deg,rgba(7,23,38,.973),rgba(3,12,26,.977));border-color:rgba(139,186,210,.32);box-shadow:0 17px 52px rgba(0,1,9,.58),inset 0 1px rgba(203,237,255,.07)}
+#panel::before{opacity:.64}
+#detail{background:none}
+#hovercard{border-color:rgba(142,213,227,.54);background:rgba(6,18,37,.975);box-shadow:0 12px 34px rgba(0,0,0,.55)}
+#scene-caption{opacity:.64}
+.view-btn[aria-pressed=true]{box-shadow:inset 0 1px rgba(255,255,255,.36)}
+@media(prefers-reduced-motion:reduce){#panel,#topbar{backdrop-filter:none}}
 </style>
 </head>
 <body>
@@ -324,59 +337,75 @@ function project(n){let w=state.width,h=state.height,px=n.pos.x,py=n.pos.y,pz=n.
  let cy=Math.cos(state.yaw),sy=Math.sin(state.yaw),cp=Math.cos(state.pitch),sp=Math.sin(state.pitch);let x=px*cy+pz*sy,z=pz*cy-px*sy,y=py*cp-z*sp,zz=z*cp+py*sp;let focal=Math.min(w*.95,h*1.28)*1.32,dist=1210/state.zoom,scale=focal/Math.max(245,dist-zz);return{x:centerX+(x+state.panX)*scale,y:centerY+(y+state.panY)*scale,depth:zz,scale};}
 function resize(){const r=el.canvas.getBoundingClientRect(),dpr=Math.min(qualityLow()?1.25:1.8,window.devicePixelRatio||1);state.width=Math.max(1,Math.round(r.width));state.height=Math.max(1,Math.round(r.height));state.dpr=dpr;el.canvas.width=Math.round(state.width*dpr);el.canvas.height=Math.round(state.height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);buildBackdrop();requestDraw()}
 function buildBackdrop(){
- const w=state.width,h=state.height,b=document.createElement('canvas');b.width=w;b.height=h;const g=b.getContext('2d');if(!g)return;
- const fade=qualityLow()?.43:1;
- let ground=g.createLinearGradient(0,0,w,h);
- ground.addColorStop(0,'#020914');ground.addColorStop(.31,'#0a2235');ground.addColorStop(.68,'#111e38');ground.addColorStop(1,'#030b18');g.fillStyle=ground;g.fillRect(0,0,w,h);
- function nebula(x,y,r,rgb,a){const cx=w*x,cy=h*y,rad=Math.max(w,h)*r,light=g.createRadialGradient(cx,cy,0,cx,cy,rad);light.addColorStop(0,`rgba(${rgb},${a*fade})`);light.addColorStop(.38,`rgba(${rgb},${a*.37*fade})`);light.addColorStop(1,`rgba(${rgb},0)`);g.fillStyle=light;g.fillRect(cx-rad,cy-rad,rad*2,rad*2)}
- nebula(.24,.33,.45,'24,149,165',.18);nebula(.55,.45,.54,'45,94,151',.24);nebula(.82,.24,.42,'108,78,147',.20);nebula(.38,.79,.40,'27,103,119',.15);nebula(.83,.79,.49,'30,112,139',.15);
- // The stellar river is a fixed photographic-like stratum, not an animated particle system.
- const rnd=rng(1830527),river=qualityLow()?160:Math.min(1200,Math.ceil(w*h/1350));
- for(let i=0;i<river;i++){
-  const u=rnd(),x=w*(u*1.3-.15),mid=h*(.68-.43*u+.10*Math.sin(u*4.3)),spread=(rnd()+rnd()+rnd()-1.5)*h*.16,y=mid+spread;
+ // A fixed, seeded deep-sky plate. No background RAF loop, animated noise, network images, or tile seams.
+ const w=state.width,h=state.height,b=document.createElement('canvas');b.width=w;b.height=h;
+ const g=b.getContext('2d');if(!g)return;
+ const low=qualityLow(),rand=rng(826417);
+ const sky=g.createRadialGradient(w*.50,h*.42,0,w*.50,h*.42,Math.hypot(w,h)*.79);
+ sky.addColorStop(0,'#0b1530');sky.addColorStop(.49,'#060d21');sky.addColorStop(1,'#01040d');
+ g.fillStyle=sky;g.fillRect(0,0,w,h);
+ function haze(x,y,rx,ry,color,alpha){
+  // Elliptical, locally composed light clouds, much quieter than a full-screen colored fog.
+  g.save();g.translate(w*x,h*y);g.scale(1,ry/rx);
+  const r=Math.max(w,h)*rx,grad=g.createRadialGradient(0,0,0,0,0,r);
+  grad.addColorStop(0,`rgba(${color},${alpha})`);grad.addColorStop(.4,`rgba(${color},${alpha*.34})`);grad.addColorStop(1,`rgba(${color},0)`);
+  g.fillStyle=grad;g.fillRect(-r,-r,r*2,r*2);g.restore();
+ }
+ haze(.23,.67,.40,.18,'39,95,149',low?.10:.20);
+ haze(.56,.49,.44,.19,'51,67,130',low?.09:.18);
+ haze(.80,.32,.33,.21,'38,93,113',low?.07:.12);
+ // Distant galactic dust: many pinpoints in a loose diagonal band rather than a mechanical grid.
+ const dustCount=low?450:Math.min(2600,Math.round(w*h/510));
+ for(let i=0;i<dustCount;i++){
+  const u=rand(),v=(rand()+rand()+rand()-1.5),x=w*(u*1.33-.16);
+  const mid=h*(.75-.48*u+.018*Math.sin(u*8)),y=mid+v*h*.18;
   if(x<0||x>w||y<0||y>h)continue;
-  const close=Math.abs(spread)/h,alpha=(.028+.15*rnd())*(1-Math.min(1,close*2.7))*fade;
-  g.fillStyle=rnd()>.78?`rgba(234,220,200,${alpha})`:`rgba(132,217,224,${alpha})`;
-  const r=rnd()>.994?1.45:.23+rnd()*.65;g.fillRect(x,y,r,r);
+  const center=Math.max(.1,1-Math.abs(v)*.77),a=(.025+.11*rand())*center;
+  g.fillStyle=rand()>.73?`rgba(205,211,238,${a})`:`rgba(133,197,225,${a})`;
+  const r=.18+rand()*.42;g.fillRect(x,y,r,r);
  }
- // Measured azimuth rings: fixed, low-contrast graphics that orient the viewer.
- g.save();g.translate(w*.51,h*.54);g.rotate(-.19);g.lineWidth=.8;
- for(let i=0;i<5;i++){
-  const rx=Math.min(w*.61,h*.94)*(.31+i*.20),ry=rx*.59;
-  g.strokeStyle=`rgba(164,203,208,${(.105-i*.013)*fade})`;
-  g.setLineDash(i%2===0?[]:[2,11]);g.beginPath();g.ellipse(0,0,rx,ry,0,0,Math.PI*2);g.stroke();
-  if(!qualityLow()&&i<3){g.setLineDash([]);for(let j=0;j<48;j++){
-   const a=j*Math.PI/24,co=Math.cos(a),si=Math.sin(a),dx=j%4===0?8:3;
-   g.strokeStyle=`rgba(194,225,224,${j%4===0?.17:.09})`;g.beginPath();g.moveTo(co*rx,si*ry);g.lineTo(co*(rx+dx),si*(ry+dx*.59));g.stroke();
-  }}
+ // Three independent stellar depths. Stars never regenerate during navigation.
+ const count=low?240:Math.min(1020,Math.round(w*h/1350));
+ for(let i=0;i<count;i++){
+  const x=rand()*w,y=rand()*h,v=rand(),a=.22+v*.65;
+  const r=v>.993?1.65:v>.968?1.15:v>.79?.71:.28+rand()*.27;
+  const tone=rand();g.fillStyle=tone>.91?`rgba(255,223,190,${a*.76})`:tone>.72?`rgba(176,211,255,${a})`:`rgba(231,242,255,${a})`;
+  g.beginPath();g.arc(x,y,r,0,Math.PI*2);g.fill();
+  if(v>.994&&!low){
+   const halo=g.createRadialGradient(x,y,0,x,y,11);halo.addColorStop(0,'rgba(228,238,255,.24)');halo.addColorStop(1,'rgba(228,238,255,0)');
+   g.fillStyle=halo;g.fillRect(x-11,y-11,22,22);
+   g.strokeStyle='rgba(220,239,255,.28)';g.lineWidth=.48;g.beginPath();g.moveTo(x-5,y);g.lineTo(x+5,y);g.moveTo(x,y-5);g.lineTo(x,y+5);g.stroke();
+  }
  }
- g.restore();g.setLineDash([]);
- g.lineWidth=.7;g.strokeStyle=`rgba(136,182,206,${.065*fade})`;
- for(let i=-3;i<10;i++){const x=w*i/9;g.beginPath();g.moveTo(x,0);g.lineTo(x-w*.16,h);g.stroke()}
- for(let i=0;i<=9;i++){const y=h*i/9;g.beginPath();g.moveTo(0,y);g.quadraticCurveTo(w*.5,y+h*.055,w,y);g.stroke()}
- const stars=rng(826417),n=qualityLow()?145:Math.min(690,Math.ceil(w*h/1950));
- for(let i=0;i<n;i++){
-  const x=stars()*w,y=stars()*h,bright=stars(),rad=bright>.97?1.25:bright>.88?.78:.25+stars()*.39,alpha=.19+bright*.49;
-  g.fillStyle=`rgba(210,239,238,${alpha})`;g.beginPath();g.arc(x,y,rad,0,Math.PI*2);g.fill();
-  if(bright>.989&&!qualityLow()){g.strokeStyle='rgba(198,237,226,.23)';g.lineWidth=.55;g.beginPath();g.moveTo(x-6,y);g.lineTo(x+6,y);g.moveTo(x,y-6);g.lineTo(x,y+6);g.stroke()}
- }
- // Survey gradations along the frame echo the navigational rings.
- g.lineWidth=.8;for(let i=0;i<=30;i++){const y=h*i/30,len=i%5===0?14:i%2===0?8:4;g.strokeStyle=i%5===0?'rgba(190,227,224,.22)':'rgba(144,183,200,.11)';g.beginPath();g.moveTo(0,y);g.lineTo(len,y);g.moveTo(w,y);g.lineTo(w-len,y);g.stroke()}
+ // Subtle dark edge vignette keeps repositories crisp without hiding stars.
+ const v=g.createRadialGradient(w*.5,h*.5,Math.min(w,h)*.17,w*.5,h*.5,Math.max(w,h)*.83);
+ v.addColorStop(0,'rgba(1,4,12,0)');v.addColorStop(1,'rgba(1,3,10,.44)');g.fillStyle=v;g.fillRect(0,0,w,h);
  state.starCache=b;
 }
 function bez(a,b,t,curv){const x=(a.x+b.x)/2,y=(a.y+b.y)/2,dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy)||1,amp=curv?Math.min(37,len*.13)*(curv>0?1:-1):0,cx=x-dy/len*amp,cy=y+dx/len*amp,om=1-t;return {x:om*om*a.x+2*om*t*cx+t*t*b.x,y:om*om*a.y+2*om*t*cy+t*t*b.y,cx,cy}}
 function drawEdge(e,t,selected,hovered){
  const a=state.screens.get(e.a),b=state.screens.get(e.b);if(!a||!b)return;
  const curve=hash(e.id)%2?1:-1,pos=bez(a,b,.5,curve),documented=e.status==='documented';
- const active=selected?.kind==='edge'&&selected.id===e.id,near=active||(selected?.kind==='node'&&(selected.id===e.a||selected.id===e.b))||(hovered?.kind==='edge'&&hovered.id===e.id)||(hovered?.kind==='node'&&(hovered.id===e.a||hovered.id===e.b));
- const color=documented?'#9ee7dc':'#e6c089',dim=selected&&!near?.15:1;
- ctx.save();ctx.globalAlpha=dim;ctx.lineJoin='round';ctx.lineCap='round';
+ const active=selected?.kind==='edge'&&selected.id===e.id;
+ const near=active||(selected?.kind==='node'&&(selected.id===e.a||selected.id===e.b))||(hovered?.kind==='edge'&&hovered.id===e.id)||(hovered?.kind==='node'&&(hovered.id===e.a||hovered.id===e.b));
+ const focused=!!selected||!!hovered,color=documented?'#9fdfde':'#e8bf89';
+ // At overview distance, routes are discoverable but intentionally quiet. Selection reveals them.
+ const base=state.view==='all'?(documented?.064:.045):(documented?.19:.16);
+ const opacity=near?(active?.98:.80):focused?base*.32:base;
+ if(opacity<.012)return;
+ ctx.save();ctx.lineCap='round';ctx.lineJoin='round';
  const path=()=>{ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.quadraticCurveTo(pos.cx,pos.cy,b.x,b.y)};
- if(near&&!qualityLow()){ctx.globalAlpha=dim*.24;ctx.strokeStyle=color;ctx.lineWidth=active?9:5;ctx.shadowColor=color;ctx.shadowBlur=19;path();ctx.stroke();ctx.shadowBlur=0}
- ctx.globalAlpha=dim*(near?1:documented?.34:.24);ctx.strokeStyle=near?color:documented?'#87bfc7':'#c1a17a';ctx.lineWidth=active?2.7:near?1.8:documented?.98:.88;
- if(!documented)ctx.setLineDash(active?[5,5]:[3.1,7.2]);path();ctx.stroke();ctx.setLineDash([]);
- if(near){ctx.globalAlpha=dim*.95;for(const v of [.18,.82]){const p=bez(a,b,v,curve);ctx.fillStyle=color;ctx.beginPath();ctx.arc(p.x,p.y,1.6,0,Math.PI*2);ctx.fill()}}
- if(near&&!motionOff()&&(active||selected?.kind==='node')&&state.width>700){const p=bez(a,b,(t/3300+(hash(e.id)%100)/100)%1,curve);ctx.globalAlpha=dim;ctx.fillStyle='#f9ffff';ctx.shadowColor=color;ctx.shadowBlur=17;ctx.beginPath();ctx.arc(p.x,p.y,active?3:2.25,0,Math.PI*2);ctx.fill()}
+ if(near&&!qualityLow()){
+  ctx.globalAlpha=active?.20:.10;ctx.strokeStyle=color;ctx.lineWidth=active?5:3;ctx.shadowColor=color;ctx.shadowBlur=active?12:6;path();ctx.stroke();ctx.shadowBlur=0;
+ }
+ ctx.globalAlpha=opacity;ctx.strokeStyle=near?color:documented?'#85b9c6':'#e3b488';ctx.lineWidth=active?2:near?1.35:.75;
+ if(!documented)ctx.setLineDash(near?[5,6]:[2.5,7]);path();ctx.stroke();ctx.setLineDash([]);
+ if(near&&!motionOff()&&state.width>700){
+  // One moving bead, analytic in elapsed time; no frame-dependent stepping.
+  const phase=(t/5200+(hash(e.id)%100)/100)%1,p=bez(a,b,phase,curve);
+  ctx.globalAlpha=active?.94:.72;ctx.fillStyle='#f5ffff';ctx.shadowColor=color;ctx.shadowBlur=7;
+  ctx.beginPath();ctx.arc(p.x,p.y,active?2.6:1.9,0,Math.PI*2);ctx.fill();
+ }
  ctx.restore();
 }
 function glyphOutline(x,y,r,group){
@@ -401,18 +430,18 @@ function drawNode(n,t,selected,hovered){
  p.r=highlight?Math.max(14,size+10):Math.max(7,size+5);
  ctx.save();ctx.globalAlpha=dim;
  if(n.reviewed){
-  if(!qualityLow()&&(highlight||links.length>=3)){
-   const radius=size*(highlight?5:2.8),glow=ctx.createRadialGradient(p.x,p.y,size*.2,p.x,p.y,radius);
-   glow.addColorStop(0,color+'8c');glow.addColorStop(.34,color+'20');glow.addColorStop(1,color+'00');ctx.globalAlpha=dim*(highlight?1:.58);ctx.fillStyle=glow;ctx.beginPath();ctx.arc(p.x,p.y,radius,0,Math.PI*2);ctx.fill();ctx.globalAlpha=dim;
+  if(!qualityLow()&&highlight){
+   const radius=size*3.4,glow=ctx.createRadialGradient(p.x,p.y,size*.2,p.x,p.y,radius);
+   glow.addColorStop(0,color+'8c');glow.addColorStop(.34,color+'20');glow.addColorStop(1,color+'00');ctx.globalAlpha=dim*.64;ctx.fillStyle=glow;ctx.beginPath();ctx.arc(p.x,p.y,radius,0,Math.PI*2);ctx.fill();ctx.globalAlpha=dim;
   }
-  ctx.strokeStyle=color;ctx.globalAlpha=dim*(highlight?1:.32);ctx.lineWidth=.9;ctx.beginPath();ctx.arc(p.x,p.y,size+4,0,Math.PI*2);ctx.stroke();
+  ctx.strokeStyle=color;ctx.globalAlpha=dim*(highlight?.78:.20);ctx.lineWidth=.9;ctx.beginPath();ctx.arc(p.x,p.y,size+4,0,Math.PI*2);ctx.stroke();
   if(highlight||neighbor){ctx.globalAlpha=dim*(highlight?.96:.56);ctx.strokeStyle=highlight?'#e4faff':color;ctx.lineWidth=highlight?1.35:1;ctx.beginPath();ctx.arc(p.x,p.y,size+(highlight?10:7)+((highlight&&!motionOff())?Math.sin(t*.0022)*1.1:0),0,Math.PI*2);ctx.stroke()}
-  ctx.globalAlpha=dim;ctx.shadowColor=color;ctx.shadowBlur=qualityLow()?0:highlight?18:7;
+  ctx.globalAlpha=dim;ctx.shadowColor=color;ctx.shadowBlur=qualityLow()?0:highlight?11:3;
   ctx.fillStyle='#07192b';glyphOutline(p.x,p.y,size+1.5,n.group);ctx.fill();ctx.strokeStyle=highlight?'#e7fbff':color;ctx.lineWidth=highlight?2:1.5;ctx.stroke();ctx.shadowBlur=0;
   const f=ctx.createLinearGradient(p.x-size,p.y-size,p.x+size,p.y+size);f.addColorStop(0,'#e9f9ff');f.addColorStop(.24,color);f.addColorStop(.75,'#153451');f.addColorStop(1,color);
   ctx.fillStyle=f;glyphOutline(p.x,p.y,size*.82,n.group);ctx.fill();ctx.strokeStyle='rgba(255,255,255,.55)';ctx.lineWidth=.7;ctx.stroke();
   ctx.fillStyle='#f9fffc';sectorGlyph(p.x,p.y,size*.8,n.group);
-  if(highlight){ctx.fillStyle='rgba(226,249,255,.9)';for(let i=0;i<4;i++){const a=i*Math.PI*.5+t*.00012;const radius=size+15;ctx.fillRect(p.x+Math.cos(a)*radius-1,p.y+Math.sin(a)*radius-1,2,2)}}
+  
  }else{
   ctx.globalAlpha=dim*.79;ctx.fillStyle=color;ctx.fillRect(p.x-size*.55,p.y-size*.55,size*1.1,size*1.1);
   if(!qualityLow()&&!selected){ctx.globalAlpha=.26;ctx.fillStyle=color;ctx.fillRect(p.x-1,p.y-3,2,6)}
@@ -420,34 +449,18 @@ function drawNode(n,t,selected,hovered){
  ctx.restore();
 }
 function drawClusterLabels(t){
- if(state.family!=='all')return;
- ctx.save();
+ if(state.family!=='all'||state.width<=700)return;
+ ctx.save();ctx.font='600 10px ui-monospace,Menlo,monospace';ctx.textBaseline='middle';
+ const hasFocus=!!state.selected||!!state.hover;
  for(const [key,f] of Object.entries(families)){
-  if(key==='unreviewed')continue;const p=project({pos:{x:f.cx,y:f.cy,z:f.cz}}),r=clamp(p.scale*186,62,290);
-  if(p.x+r<0||p.x-r>state.width||p.y+r<0||p.y-r>state.height)continue;
-  const transparent=!qualityLow(),count=nodes.filter(n=>n.group===key&&n.reviewed).length;
-  if(transparent){let a=ctx.createRadialGradient(p.x,p.y,r*.12,p.x,p.y,r*1.12);a.addColorStop(0,f.color+'14');a.addColorStop(.48,f.color+'08');a.addColorStop(1,f.color+'00');ctx.fillStyle=a;ctx.beginPath();ctx.arc(p.x,p.y,r*1.12,0,Math.PI*2);ctx.fill()}
-  ctx.strokeStyle=f.color;ctx.lineWidth=.75;ctx.globalAlpha=qualityLow()?.11:.25;ctx.setLineDash([2,10]);ctx.beginPath();ctx.ellipse(p.x,p.y,r,r*.72,-.15,0,Math.PI*2);ctx.stroke();ctx.setLineDash([]);
-  ctx.globalAlpha=qualityLow()?.14:.28;ctx.beginPath();ctx.ellipse(p.x,p.y,r*.78,r*.53,-.15,.32,4.95);ctx.stroke();
-  if(!qualityLow()&&state.width>=760){
-   ctx.globalAlpha=.13;ctx.strokeStyle=f.color;ctx.lineWidth=.8;
-   for(let j=0;j<8;j++){
-    const angle=j*Math.PI/4,ca=Math.cos(angle),sa=Math.sin(angle);
-    ctx.beginPath();ctx.moveTo(p.x+ca*r*.78,p.y+sa*r*.53);ctx.lineTo(p.x+ca*r*.91,p.y+sa*r*.62);ctx.stroke();
-   }
-  }
-  ctx.globalAlpha=qualityLow()?.22:.52;ctx.lineWidth=1.1;ctx.beginPath();ctx.ellipse(p.x,p.y,r,r*.72,-.15,.32,1.23);ctx.stroke();
-  if(!motionOff()&&state.width>=760){
-   const phase=(t/21000+Object.keys(families).indexOf(key)*.17)*Math.PI*2,rx=r*Math.cos(phase),ry=r*.72*Math.sin(phase),px=p.x+rx*Math.cos(-.15)-ry*Math.sin(-.15),py=p.y+rx*Math.sin(-.15)+ry*Math.cos(-.15);
-   ctx.globalAlpha=.68;ctx.fillStyle='#f9fcff';ctx.shadowColor=f.color;ctx.shadowBlur=12;ctx.beginPath();ctx.arc(px,py,1.8,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;
-  }
-  if(state.width>700){
-   const x=clamp(p.x-r*.66,18,state.width-170),y=clamp(p.y-r*.70-27,87,state.height-43),name=f.label.toUpperCase();
-   ctx.globalAlpha=.94;ctx.font='700 10px ui-monospace,Menlo,monospace';const tw=ctx.measureText(name).width;
-   ctx.fillStyle='rgba(3,12,27,.74)';ctx.fillRect(x-9,y-15,Math.max(150,tw+55),28);ctx.fillStyle=f.color;ctx.fillRect(x-9,y-15,2,28);
-   ctx.fillStyle='#d4e9f2';ctx.fillText(name,x,y+2);
-   ctx.fillStyle=f.color;ctx.font='10px ui-monospace,Menlo,monospace';ctx.fillText(String(count).padStart(2,'0'),x+tw+11,y+2);
-  }
+  if(key==='unreviewed')continue;
+  const p=project({pos:{x:f.cx,y:f.cy,z:f.cz}}),r=clamp(p.scale*160,52,216);
+  const label=f.label.toUpperCase(),x=p.x-r*.64,y=p.y-r*.64-18;
+  if(x<20||x>state.width-190||y<112||y>state.height-45)continue;
+  // No rings, ticks, label boxes or orbiting points: the sky remains visible.
+  ctx.globalAlpha=hasFocus?.40:.68;ctx.fillStyle=f.color;
+  ctx.fillRect(x,y-1,13,1);
+  ctx.fillStyle='#c3d7e6';ctx.fillText(label,x+19,y);
  }
  ctx.restore();
 }
@@ -456,7 +469,7 @@ function drawLabels(){
   const score=n=>(adj.get(n.id)?.length||0)*4+(state.hover?.id===n.id?520:0)+(state.selected?.id===n.id?620:0)+(state.selected?.kind==='edge'&&[edgeById.get(state.selected.id)?.a,edgeById.get(state.selected.id)?.b].includes(n.id)?420:0);
   return score(b)-score(a)
  });
- const limit=qualityLow()?(state.width<700?4:15):(state.width<700?6:24),labels=[];
+ const limit=state.width<700?4:state.width<1200?9:12,labels=[];
  ctx.save();ctx.font='600 12px system-ui,-apple-system,sans-serif';
  for(const n of important){if(labels.length>=limit)break;const p=state.screens.get(n.id);if(!p)continue;
   const active=state.selected?.id===n.id||state.hover?.id===n.id||state.selected?.kind==='edge'&&[edgeById.get(state.selected.id)?.a,edgeById.get(state.selected.id)?.b].includes(n.id);
@@ -492,23 +505,26 @@ function drawSurveyFocus(t){
  }
  ctx.restore();
 }
-function ambientMotion(t){return !motionOff()&&state.width>=760&&nodes.length<=350&&edges.length<=600&&t>=state.fxCooldown}
+function ambientMotion(t){
+ return !motionOff()&&!!(state.selected||state.hover)&&state.width>=760&&nodes.length<=350&&edges.length<=600&&t>=state.fxCooldown;
+}
 function render(t=0){
  state.scheduled=0;if(document.hidden)return;
- const flowing=state.selected?.kind==='edge'&&!motionOff()&&edges.length<=600;
- if(!state.needsDraw&&!state.transition&&(ambientMotion(t)||flowing)&&t-state.lastFrame<55){state.scheduled=requestAnimationFrame(render);return}
+ const flowing=ambientMotion(t);
  const started=performance.now();state.lastFrame=t;
- if(state.transition){let p=clamp((t-state.transition.start)/state.transition.duration,0,1),v=1-Math.pow(1-p,3);state.yaw=state.transition.yaw0+(state.transition.yaw1-state.transition.yaw0)*v;state.pitch=state.transition.pitch0+(state.transition.pitch1-state.transition.pitch0)*v;if(p>=1)state.transition=null}
+ if(state.transition){const p=clamp((t-state.transition.start)/state.transition.duration,0,1),v=1-Math.pow(1-p,3);state.yaw=state.transition.yaw0+(state.transition.yaw1-state.transition.yaw0)*v;state.pitch=state.transition.pitch0+(state.transition.pitch1-state.transition.pitch0)*v;if(p>=1)state.transition=null}
  ctx.setTransform(state.dpr,0,0,state.dpr,0,0);ctx.clearRect(0,0,state.width,state.height);if(state.starCache)ctx.drawImage(state.starCache,0,0,state.width,state.height);
  drawClusterLabels(t);state.screens.clear();const visible=nodes.filter(nodeAllowed);for(const n of visible){const p=project(n);if(p.x>-70&&p.x<state.width+70&&p.y>-60&&p.y<state.height+60)state.screens.set(n.id,p)}state.frameVisible=visible.filter(n=>state.screens.has(n.id));
  const es=shownEdges();for(const e of es)drawEdge(e,t,state.selected,state.hover);state.frameVisible.sort((a,b)=>state.screens.get(a.id).depth-state.screens.get(b.id).depth);for(const n of state.frameVisible)drawNode(n,t,state.selected,state.hover);drawSurveyFocus(t);drawLabels();state.needsDraw=false;
- // Back off the ambient clock on consistently slow devices; never back off input redraws.
- const cost=performance.now()-started;if(state.quality==='auto'&&cost>20)state.fxSlowFrames++;else state.fxSlowFrames=Math.max(0,state.fxSlowFrames-1);
- if(state.fxSlowFrames>=7){state.fxCooldown=t+10000;state.fxSlowFrames=0}
- if(state.transition||flowing||ambientMotion(t))state.scheduled=requestAnimationFrame(render)
+ // Never throttle normal motion to 18 fps. Let the browser's existing RAF clock pace transitions.
+ // Stop all ambient drawing at rest; back off expensive selected-route effects, not input redraws.
+ const cost=performance.now()-started;
+ if(state.quality==='auto'&&cost>18)state.fxSlowFrames++;else state.fxSlowFrames=Math.max(0,state.fxSlowFrames-1);
+ if(state.fxSlowFrames>=5){state.fxCooldown=t+8000;state.fxSlowFrames=0}
+ if(state.transition||ambientMotion(t))state.scheduled=requestAnimationFrame(render);
 }
 function requestDraw(){state.needsDraw=true;if(!state.scheduled&&!document.hidden)state.scheduled=requestAnimationFrame(render)}
-function pick(x,y){let node=null,score=1e6;for(const n of state.frameVisible){const p=state.screens.get(n.id);const d=Math.hypot(x-p.x,y-p.y);let allowance=Math.max(12,p.r+2);if(d<allowance&&d<score){score=d;node={kind:'node',id:n.id}}}if(node)return node;let found=null,md=11;for(const e of shownEdges()){const a=state.screens.get(e.a),b=state.screens.get(e.b);if(!a||!b)continue;for(let i=0;i<=22;i++){let p=bez(a,b,i/22,hash(e.id)%2?1:-1),d=Math.hypot(x-p.x,y-p.y);if(d<md){md=d;found={kind:'edge',id:e.id}}}}return found}
+function pick(x,y,forHover=false){let node=null,score=1e6;for(const n of state.frameVisible){const p=state.screens.get(n.id);const d=Math.hypot(x-p.x,y-p.y);let allowance=Math.max(12,p.r+2);if(d<allowance&&d<score){score=d;node={kind:'node',id:n.id}}}if(node)return node;let found=null,md=forHover?5:11;for(const e of shownEdges()){const a=state.screens.get(e.a),b=state.screens.get(e.b);if(!a||!b)continue;for(let i=0;i<=22;i++){let p=bez(a,b,i/22,hash(e.id)%2?1:-1),d=Math.hypot(x-p.x,y-p.y);if(d<md){md=d;found={kind:'edge',id:e.id}}}}return found}
 function localPos(ev){const r=el.canvas.getBoundingClientRect();return{x:ev.clientX-r.left,y:ev.clientY-r.top}}
 function drawHover(p){if(!p){el.tooltip.style.display='none';return}el.tooltip.replaceChildren();if(p.kind==='node'){let n=nodesById.get(p.id);el.tooltip.append(text('strong',n.name),text('small',n.reviewed?'README inspected · '+families[n.group].label:'Public inventory · not source-reviewed'))}else{let e=edgeById.get(p.id);el.tooltip.append(text('strong',nodesById.get(e.a).name+' ↔ '+nodesById.get(e.b).name),text('small',(e.status==='documented'?'DOCUMENTED · ':'HYPOTHESIS · ')+relationNames[e.type]))}let pnt=state.down?.last||{x:state.width/2,y:state.height/2};el.tooltip.style.left=clamp(pnt.x+17,10,state.width-275)+'px';el.tooltip.style.top=clamp(pnt.y-24,68,state.height-80)+'px';el.tooltip.style.display='block'}
 function changeHover(p){if(state.hover?.id===p?.id&&state.hover?.kind===p?.kind)return;state.hover=p;drawHover(p);requestDraw()}
@@ -537,8 +553,8 @@ function expandTaskPanel(){if(innerWidth>700)return;el.panel.classList.add('expa
 function backToMap(){el.panel.classList.remove('expanded');$('expandPanel').hidden=false;$('collapsePanel').hidden=true;$('expandPanel').setAttribute('aria-expanded','false');el.canvas.focus()}
 function taskQuickStart(){
  const root=document.createElement('section');root.className='quick-start';
- root.append(text('h2','What are you looking for?'),text('p','The map is for exploring. Repo_Dex supplies source-backed leads; every proposal remains unverified.','thin'));
- root.append(text('p','Solid lines = documented source claims; dashed lines = proposals needing an experiment.','source-date'));const row=document.createElement('div');row.className='quick-route';
+ root.append(text('h2','What are you looking for?'),text('p','Choose a repository star to reveal its connections. Drag to orbit the sky; scroll to zoom.','thin'));
+ root.append(text('p','Solid paths carry documented claims. Dashed paths are proposals, never proof.','source-date'));const row=document.createElement('div');row.className='quick-route';
  row.append(btn('See what changed',showLivePulse),btn('Review experiments',showReviewWorkspace),btn('Find a project',()=>{if(innerWidth<=700)openMobileSearch();else el.search.focus()}),btn('Text index',showAccessibleIndex));
  root.append(row);return root;
 }
@@ -629,7 +645,7 @@ function restore(){liveCustom=false;loadGraph(JSON.parse(JSON.stringify(builtin)
 const tourPairs=[['Starsilk_PWA_Mapper','Starsilk_Character_Dossier'],['form-engine','modern_3d_browser_game_toolkit'],['FFMPEG_POCKET','Dex-Video-Code']];let tourIndex=0;function nextTour(){const [a,b]=tourPairs[tourIndex++%tourPairs.length];const e=edges.find(x=>(x.a===a&&x.b===b)||(x.a===b&&x.b===a));if(e){state.view='all';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view==='all')));el.mobileView.value='all';state.relation='all';el.relation.value='all';state.family='all';el.category.value='all';setInventory(true);pushSelection({kind:'edge',id:e.id});frameNode(e.a);announce(`Tour ${((tourIndex-1)%tourPairs.length)+1}/3 · ${e.status==='documented'?'Source fact':'Proposed seam'}`)}}
 // The map has a single renderer clock; pointer input requests an immediate frame.
 let pointers=new Map();function startPoint(e){if(e.button!==undefined&&e.button!==0)return;el.canvas.setPointerCapture(e.pointerId);pointers.set(e.pointerId,localPos(e));state.down={x:e.clientX,y:e.clientY,last:localPos(e)};state.dragging=false;state.transition=null;el.canvas.classList.add('dragging')}
-function movePoint(e){let p=localPos(e);state.down&&(state.down.last=p);if(!pointers.has(e.pointerId)){if(e.pointerType==='mouse')changeHover(pick(p.x,p.y));return}const old=pointers.get(e.pointerId);pointers.set(e.pointerId,p);if(pointers.size===2){let a=[...pointers.values()];let dis=Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y);if(state.gesture){state.zoom=clamp(state.gesture.z*dis/Math.max(1,state.gesture.d),.5,3.9)}else state.gesture={d:dis,z:state.zoom};state.dragging=true;requestDraw();return}if(state.down&&Math.hypot(e.clientX-state.down.x,e.clientY-state.down.y)>5)state.dragging=true;if(state.dragging){if(state.flat){state.panX+=(p.x-old.x)*1.35/state.zoom;state.panY+=(p.y-old.y)*1.35/state.zoom}else{state.yaw+=(p.x-old.x)*.005;state.pitch=clamp(state.pitch+(p.y-old.y)*.0048,-1.12,1.12)}requestDraw()}else if(e.pointerType==='mouse')changeHover(pick(p.x,p.y))}
+function movePoint(e){let p=localPos(e);state.down&&(state.down.last=p);if(!pointers.has(e.pointerId)){if(e.pointerType==='mouse')changeHover(pick(p.x,p.y,true));return}const old=pointers.get(e.pointerId);pointers.set(e.pointerId,p);if(pointers.size===2){let a=[...pointers.values()];let dis=Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y);if(state.gesture){state.zoom=clamp(state.gesture.z*dis/Math.max(1,state.gesture.d),.5,3.9)}else state.gesture={d:dis,z:state.zoom};state.dragging=true;requestDraw();return}if(state.down&&Math.hypot(e.clientX-state.down.x,e.clientY-state.down.y)>5)state.dragging=true;if(state.dragging){if(state.flat){state.panX+=(p.x-old.x)*1.35/state.zoom;state.panY+=(p.y-old.y)*1.35/state.zoom}else{state.yaw+=(p.x-old.x)*.005;state.pitch=clamp(state.pitch+(p.y-old.y)*.0048,-1.12,1.12)}requestDraw()}else if(e.pointerType==='mouse')changeHover(pick(p.x,p.y,true))}
 function endPoint(e){if(!pointers.has(e.pointerId))return;const wasDrag=state.dragging;const p=localPos(e);pointers.delete(e.pointerId);if(pointers.size<2)state.gesture=null;if(pointers.size===0){el.canvas.classList.remove('dragging');state.down=null;state.dragging=false;if(!wasDrag){const hit=pick(p.x,p.y);if(hit)pushSelection(hit)}}requestDraw()}
 function wheel(e){e.preventDefault();state.zoom=clamp(state.zoom*Math.exp(-e.deltaY*.001),.5,3.9);state.transition=null;requestDraw()}
 function scopedKey(e){let tag=document.activeElement?.tagName||'';if(tag==='INPUT'||tag==='SELECT'||tag==='TEXTAREA'||el.dialog.open)return;if(e.key==='/'||e.key==='?'){e.preventDefault();e.key==='/'?openMobileSearch():showHelp();return}if(e.key==='Escape'){closeSearch();if(!el.tools.hidden)toggleTools(false);return}if(e.key.toLowerCase()==='f'){setFlat(!state.flat);return}if(e.key==='Home'){resetCamera();e.preventDefault();return}if(document.activeElement===el.canvas){let changed=true;if(e.key==='ArrowLeft')state.flat?state.panX+=48:state.yaw-=.12;else if(e.key==='ArrowRight')state.flat?state.panX-=48:state.yaw+=.12;else if(e.key==='ArrowUp')state.flat?state.panY+=48:state.pitch=clamp(state.pitch-.1,-1.12,1.12);else if(e.key==='ArrowDown')state.flat?state.panY-=48:state.pitch=clamp(state.pitch+.1,-1.12,1.12);else if(e.key==='+'||e.key==='=')state.zoom=clamp(state.zoom*1.15,.5,3.9);else if(e.key==='-'||e.key==='_')state.zoom=clamp(state.zoom/1.15,.5,3.9);else changed=false;if(changed){e.preventDefault();requestDraw()}}}
